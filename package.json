@@ -19,6 +19,8 @@
         "@types/react": "^18.2.66",
         "@types/react-dom": "^18.2.22",
         "@vitejs/plugin-react": "^4.2.1",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.34.2",
@@ -30,5 +32,83 @@
         "typescript": "^5.2.2",
         "typescript-eslint": "^7.13.0",
         "vite": "^5.2.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog",
+            "maxHeaderWidth": 50,
+            "maxLineWidth": 72,
+            "defaultType": "feat",
+            "types": {
+                "✨feat": {
+                    "description": "A new feature",
+                    "title": "Features"
+                },
+                "🐛fix": {
+                    "description": "A bug fix",
+                    "title": "Bug fix"
+                },
+                "📚docs": {
+                    "description": "Changes made only to the documentation",
+                    "title": "Documentation"
+                },
+                "🎨style": {
+                    "description": "Alteration that don't change the code intent (white space, formatting, missing semi-colons, ...)",
+                    "title": "Code styling"
+                },
+                "♻️ refactor": {
+                    "description": "An update to the code that neither adds features nor fixes bugs",
+                    "title": "Code refactoring"
+                },
+                "⚡perf": {
+                    "description": "A performance enhancing tweak to the code",
+                    "title": "Performance improvements"
+                },
+                "🧪test": {
+                    "description": "Addition or update of tests",
+                    "title": "Tests"
+                },
+                "⚒️ build": {
+                    "description": "Modification to the build system or to external dependencies",
+                    "title": "Builds"
+                },
+                "🚀ci": {
+                    "description": "Modification to the CI configuration scripts and files",
+                    "title": "Continuous Integration"
+                },
+                "⚙️ chore": {
+                    "description": "Other updates that don't alter the test or source files",
+                    "title": "Chores"
+                },
+                "🗑️ revert": {
+                    "description": "Reverts a previous commit",
+                    "title": "Reverts commit"
+                },
+                "🎉init": {
+                    "description": "Initial commit",
+                    "title": "Initial commit"
+                },
+                "📦metadata": {
+                    "description": "Update to the metadata (package.json, ...)",
+                    "title": "Update metadata"
+                },
+                "⏫dependencies": {
+                    "description": "Update to dependencies",
+                    "title": "Dependencies"
+                },
+                "⬆️ peerDependencies": {
+                    "description": "Update to peer dependencies",
+                    "title": "Peer dependencies"
+                },
+                "🔼devDependencies": {
+                    "description": "Update to dev dependencies",
+                    "title": "Dev dependencies"
+                },
+                "🏷️ release": {
+                    "description": "Release a new version",
+                    "title": "Release"
+                }
+            }
+        }
     }
 }
