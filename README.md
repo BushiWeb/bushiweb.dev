@@ -1,12 +1,3 @@
-<!--
-What motivation?
-Why building the project?
-What problem does it solve?
-What did I learn?
-What makes the project stand out?
-What features the project does have?
--->
-
 # [bushiweb.dev](https://bushiweb.dev): a developper's portfolio
 
 **Project currently in development**
