@@ -1,5 +1,5 @@
 export default {
-    extends: ['stylelint-config-standard', 'stylelint-config-rational-order'],
+    extends: ['stylelint-config-standard'],
     plugins: [
         'stylelint-no-unresolved-module',
         'stylelint-plugin-defensive-css',
