@@ -5,7 +5,7 @@
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "module": "ESNext",
         "skipLibCheck": true,
-        "baseUrl": "src",
+        "baseUrl": "frontend",
 
         /* Bundler mode */
         "moduleResolution": "bundler",
