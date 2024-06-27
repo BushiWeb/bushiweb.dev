@@ -1,0 +1,73 @@
+/* Display typogpahy */
+.pattern-typography-display-m {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-l6);
+    line-height: var(--line-height-null);
+}
+
+/* Title typography */
+.pattern-typography-title-l {
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-l4);
+    line-height: var(--line-height-thin);
+}
+
+.pattern-typography-title-m {
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-l3);
+    line-height: var(--line-height-thin);
+}
+
+.pattern-typography-title-s {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-l2);
+    line-height: var(--line-height-small);
+}
+
+/* Body typography */
+.pattern-typography-body-l {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-l1);
+    line-height: var(--line-height-normal);
+}
+
+.pattern-typography-body-m {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-normal);
+}
+
+.pattern-typography-body-s {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-s1);
+    line-height: var(--line-height-normal);
+}
+
+/* Label typography */
+.pattern-typography-label-l {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-thin);
+}
+
+.pattern-typography-label-m {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-s1);
+    line-height: var(--line-height-small);
+}
+
+.pattern-typography-label-s {
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-s2);
+    line-height: var(--line-height-small);
+}

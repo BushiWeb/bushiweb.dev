@@ -3,13 +3,12 @@
 
 /* @import url('./vendor/index.css') layer(vendor); */
 
-/* @import url('./variables/index.css') layer(defaults); */
-
-/* @import url('base/index.css') layer(defaults); */
+@import url('./variables/index.css') layer(defaults);
+@import url('./base/base.css') layer(defaults);
 
 /* @import url('./theme/index.css') layer(themes); */
 
-/* @import url('patterns/index.css') layer(patterns); */
+@import url('./patterns/index.css') layer(patterns);
 
 /* @import url('animations/index.css') layer(animations); */
 

@@ -1,0 +1,286 @@
+:root {
+    /* Color seeds */
+    --color-seed-primary: #6d071a;
+    --color-seed-secondary: #a35032;
+    --color-seed-tertiary: #2660a4;
+    --color-seed-neutral: #bab5b6;
+    --color-seed-neutral-variation: #b6bcc2;
+    --color-seed-success: #3df314;
+    --color-seed-caution: #e7cb15;
+    --color-seed-danger: #d0435a;
+    --color-seed-info: #1799d5;
+
+    /* Reference color */
+
+    /* Primary references */
+    --color-ref-primary-0: #000;
+    --color-ref-primary-2: #000;
+    --color-ref-primary-5: #020000;
+    --color-ref-primary-10: #0d0001;
+    --color-ref-primary-15: #1e0002;
+    --color-ref-primary-20: #320005;
+    --color-ref-primary-25: #47000a;
+    --color-ref-primary-30: #5c0110;
+    --color-ref-primary-35: #730016;
+    --color-ref-primary-40: #8a001d;
+    --color-ref-primary-50: #af2936;
+    --color-ref-primary-60: #d54851;
+    --color-ref-primary-65: #e6595f;
+    --color-ref-primary-70: #f66c70;
+    --color-ref-primary-75: #ff8385;
+    --color-ref-primary-80: #ff9f9f;
+    --color-ref-primary-85: #ffb9b8;
+    --color-ref-primary-90: #ffd1d0;
+    --color-ref-primary-95: #fee9e8;
+    --color-ref-primary-98: #fff6f6;
+    --color-ref-primary-100: #fff;
+
+    /* Secondary references */
+    --color-ref-secondary-0: #000;
+    --color-ref-secondary-2: #000;
+    --color-ref-secondary-5: #010000;
+    --color-ref-secondary-10: #070201;
+    --color-ref-secondary-15: #160603;
+    --color-ref-secondary-20: #260e06;
+    --color-ref-secondary-25: #37170b;
+    --color-ref-secondary-30: #492012;
+    --color-ref-secondary-35: #5c2a18;
+    --color-ref-secondary-40: #6f341f;
+    --color-ref-secondary-50: #974a2e;
+    --color-ref-secondary-60: #c1603d;
+    --color-ref-secondary-65: #d86c45;
+    --color-ref-secondary-70: #e77d57;
+    --color-ref-secondary-75: #ea9577;
+    --color-ref-secondary-80: #ecac96;
+    --color-ref-secondary-85: #efc2b3;
+    --color-ref-secondary-90: #f2d7ce;
+    --color-ref-secondary-95: #f7ece8;
+    --color-ref-secondary-98: #fcf7f6;
+    --color-ref-secondary-100: #fff;
+
+    /* Tertiary references */
+    --color-ref-tertiary-0: #000;
+    --color-ref-tertiary-2: #000;
+    --color-ref-tertiary-5: #000001;
+    --color-ref-tertiary-10: #010309;
+    --color-ref-tertiary-15: #030b19;
+    --color-ref-tertiary-20: #05162c;
+    --color-ref-tertiary-25: #09223f;
+    --color-ref-tertiary-30: #0e2e53;
+    --color-ref-tertiary-35: #143b68;
+    --color-ref-tertiary-40: #1b487d;
+    --color-ref-tertiary-50: #2764aa;
+    --color-ref-tertiary-60: #4082d0;
+    --color-ref-tertiary-65: #4f91e1;
+    --color-ref-tertiary-70: #65a1eb;
+    --color-ref-tertiary-75: #80b1ee;
+    --color-ref-tertiary-80: #9bc1f0;
+    --color-ref-tertiary-85: #b6d0f2;
+    --color-ref-tertiary-90: #cfe0f5;
+    --color-ref-tertiary-95: #e8eff8;
+    --color-ref-tertiary-98: #f6f9fc;
+    --color-ref-tertiary-100: #fff;
+
+    /* Neutral references */
+    --color-ref-neutral-0: #000;
+    --color-ref-neutral-2: #000;
+    --color-ref-neutral-5: #000;
+    --color-ref-neutral-10: #030303;
+    --color-ref-neutral-15: #0c0b0b;
+    --color-ref-neutral-20: #171516;
+    --color-ref-neutral-25: #232121;
+    --color-ref-neutral-30: #302d2d;
+    --color-ref-neutral-35: #3d393a;
+    --color-ref-neutral-40: #4b4647;
+    --color-ref-neutral-50: #686163;
+    --color-ref-neutral-60: #867e7f;
+    --color-ref-neutral-65: #958c8e;
+    --color-ref-neutral-70: #a49c9e;
+    --color-ref-neutral-75: #b2acad;
+    --color-ref-neutral-80: #c1bcbd;
+    --color-ref-neutral-85: #cfcdcd;
+    --color-ref-neutral-90: #dfddde;
+    --color-ref-neutral-95: #efeeee;
+    --color-ref-neutral-98: #f8f8f8;
+    --color-ref-neutral-100: #fff;
+
+    /* Neutral variation references */
+    --color-ref-neutral-variation-0: #000;
+    --color-ref-neutral-variation-2: #000;
+    --color-ref-neutral-variation-5: #000;
+    --color-ref-neutral-variation-10: #030304;
+    --color-ref-neutral-variation-15: #0a0b0d;
+    --color-ref-neutral-variation-20: #141618;
+    --color-ref-neutral-variation-25: #1f2225;
+    --color-ref-neutral-variation-30: #2b2e32;
+    --color-ref-neutral-variation-35: #373b3f;
+    --color-ref-neutral-variation-40: #43484d;
+    --color-ref-neutral-variation-50: #5e646a;
+    --color-ref-neutral-variation-60: #79818a;
+    --color-ref-neutral-variation-65: #87909a;
+    --color-ref-neutral-variation-70: #96a0a9;
+    --color-ref-neutral-variation-75: #a7afb7;
+    --color-ref-neutral-variation-80: #b9bec4;
+    --color-ref-neutral-variation-85: #caced2;
+    --color-ref-neutral-variation-90: #dcdee0;
+    --color-ref-neutral-variation-95: #edeef0;
+    --color-ref-neutral-variation-98: #f8f8f9;
+    --color-ref-neutral-variation-100: #fff;
+
+    /* Success references */
+    --color-ref-success-0: #000;
+    --color-ref-success-2: #000;
+    --color-ref-success-5: #000100;
+    --color-ref-success-10: #000500;
+    --color-ref-success-15: #011000;
+    --color-ref-success-20: #021d00;
+    --color-ref-success-25: #042a00;
+    --color-ref-success-30: #063900;
+    --color-ref-success-35: #0a4801;
+    --color-ref-success-40: #0e5800;
+    --color-ref-success-50: #177801;
+    --color-ref-success-60: #209b01;
+    --color-ref-success-65: #24ac00;
+    --color-ref-success-70: #2bbe05;
+    --color-ref-success-75: #2fd104;
+    --color-ref-success-80: #34e402;
+    --color-ref-success-85: #40f619;
+    --color-ref-success-90: #90fd80;
+    --color-ref-success-95: #d3fccc;
+    --color-ref-success-98: #f0fded;
+    --color-ref-success-100: #fff;
+
+    /* Caution references */
+    --color-ref-caution-0: #000;
+    --color-ref-caution-2: #000;
+    --color-ref-caution-5: #010000;
+    --color-ref-caution-10: #060300;
+    --color-ref-caution-15: #120900;
+    --color-ref-caution-20: #201400;
+    --color-ref-caution-25: #2e1f00;
+    --color-ref-caution-30: #3d2a00;
+    --color-ref-caution-35: #4c3701;
+    --color-ref-caution-40: #5b4402;
+    --color-ref-caution-50: #7c5e01;
+    --color-ref-caution-60: #9f7b03;
+    --color-ref-caution-65: #b08a00;
+    --color-ref-caution-70: #c09900;
+    --color-ref-caution-75: #d1a903;
+    --color-ref-caution-80: #e2ba06;
+    --color-ref-caution-85: #f3ca03;
+    --color-ref-caution-90: #ffdc48;
+    --color-ref-caution-95: #ffefac;
+    --color-ref-caution-98: #fff9dd;
+    --color-ref-caution-100: #fff;
+
+    /* Danger references */
+    --color-ref-danger-0: #000;
+    --color-ref-danger-2: #000;
+    --color-ref-danger-5: #010000;
+    --color-ref-danger-10: #090102;
+    --color-ref-danger-15: #190406;
+    --color-ref-danger-20: #2b080d;
+    --color-ref-danger-25: #3e0e16;
+    --color-ref-danger-30: #52151f;
+    --color-ref-danger-35: #661c28;
+    --color-ref-danger-40: #7b2432;
+    --color-ref-danger-50: #a73447;
+    --color-ref-danger-60: #d5455d;
+    --color-ref-danger-65: #e7566b;
+    --color-ref-danger-70: #ea7481;
+    --color-ref-danger-75: #ed8f96;
+    --color-ref-danger-80: #efa8ac;
+    --color-ref-danger-85: #f1bfc2;
+    --color-ref-danger-90: #f4d5d7;
+    --color-ref-danger-95: #f8ebeb;
+    --color-ref-danger-98: #fbf7f7;
+    --color-ref-danger-100: #fff;
+
+    /* Info references */
+    --color-ref-info-0: #000;
+    --color-ref-info-2: #000;
+    --color-ref-info-5: #000001;
+    --color-ref-info-10: #000407;
+    --color-ref-info-15: #010d16;
+    --color-ref-info-20: #021826;
+    --color-ref-info-25: #022537;
+    --color-ref-info-30: #043249;
+    --color-ref-info-35: #043f5b;
+    --color-ref-info-40: #084e6e;
+    --color-ref-info-50: #0e6b96;
+    --color-ref-info-60: #148ac1;
+    --color-ref-info-65: #169ad7;
+    --color-ref-info-70: #1baaec;
+    --color-ref-info-75: #3cbafc;
+    --color-ref-info-80: #74c9fb;
+    --color-ref-info-85: #9dd6fa;
+    --color-ref-info-90: #c1e4fa;
+    --color-ref-info-95: #e3f1fa;
+    --color-ref-info-98: #f4f9fd;
+    --color-ref-info-100: #fff;
+
+    /* Semantic colors */
+
+    /* Primary semantics */
+    --color-semantic-primary-primary: var(--color-ref-primary-70);
+    --color-semantic-primary-on-primary: var(--color-ref-primary-10);
+    --color-semantic-primary-primary-background: var(--color-ref-primary-15);
+    --color-semantic-primary-primary-container: var(--color-ref-primary-25);
+    --color-semantic-primary-on-primary-container: var(--color-ref-primary-80);
+
+    /* Secondary semantics */
+    --color-semantic-secondary-secondary: var(--color-ref-secondary-70);
+    --color-semantic-secondary-on-secondary: var(--color-ref-secondary-10);
+    --color-semantic-secondary-secondary-container: var(
+        --color-ref-secondary-25
+    );
+    --color-semantic-secondary-on-secondary-container: var(
+        --color-ref-secondary-80
+    );
+
+    /* Tertiary semantics */
+    --color-semantic-tertiary-tertiary: var(--color-ref-tertiary-70);
+    --color-semantic-tertiary-on-tertiary: var(--color-ref-tertiary-10);
+    --color-semantic-tertiary-tertiary-container: var(--color-ref-tertiary-25);
+    --color-semantic-tertiary-on-tertiary-container: var(
+        --color-ref-tertiary-80
+    );
+
+    /* Success semantics */
+    --color-semantic-success-success: var(--color-ref-success-70);
+    --color-semantic-success-on-success: var(--color-ref-success-10);
+    --color-semantic-success-success-container: var(--color-ref-success-25);
+    --color-semantic-success-on-success-container: var(--color-ref-success-80);
+
+    /* Caution semantics */
+    --color-semantic-caution-caution: var(--color-ref-caution-70);
+    --color-semantic-caution-on-caution: var(--color-ref-caution-10);
+    --color-semantic-caution-caution-container: var(--color-ref-caution-25);
+    --color-semantic-caution-on-caution-container: var(--color-ref-caution-80);
+
+    /* Danger semantics */
+    --color-semantic-danger-danger: var(--color-ref-danger-70);
+    --color-semantic-danger-on-danger: var(--color-ref-danger-10);
+    --color-semantic-danger-danger-container: var(--color-ref-danger-25);
+    --color-semantic-danger-on-danger-container: var(--color-ref-danger-80);
+
+    /* Info semantics */
+    --color-semantic-info-info: var(--color-ref-info-70);
+    --color-semantic-info-on-info: var(--color-ref-info-10);
+    --color-semantic-info-info-container: var(--color-ref-info-25);
+    --color-semantic-info-on-info-container: var(--color-ref-info-80);
+
+    /* Surface semantics */
+    --color-semantic-surface-background: var(--color-ref-neutral-15);
+    --color-semantic-surface-layer1: var(--color-ref-neutral-20);
+    --color-semantic-surface-layer2: var(--color-ref-neutral-25);
+    --color-semantic-surface-layer3: var(--color-ref-neutral-30);
+    --color-semantic-surface-layer4: var(--color-ref-neutral-35);
+    --color-semantic-surface-on-surface: var(--color-ref-neutral-85);
+    --color-semantic-surface-on-surface-variant: var(
+        --color-ref-neutral-variation-75
+    );
+
+    /* Outline semantics */
+    --color-semantic-outline-outline: var(--color-ref-neutral-variation-70);
+}

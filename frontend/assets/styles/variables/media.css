@@ -1,0 +1,2 @@
+@custom-media --viewport-m (width > 640px);
+@custom-media --viewport-l (width > 1200px);
