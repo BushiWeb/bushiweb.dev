@@ -1,5 +1,5 @@
-function App() {
-    return <p>En cours de construction</p>;
-}
+import UI from 'pages/UI';
 
-export default App;
+export default function App() {
+    return <UI />;
+}

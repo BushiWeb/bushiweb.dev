@@ -1,0 +1,13 @@
+.footer {
+    padding: var(--space-150) var(--space-300);
+    background-color: var(--color-semantic-primary-primary-background);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-semantic-primary-on-primary-container);
+
+    .logo {
+        block-size: var(--size-500);
+    }
+}

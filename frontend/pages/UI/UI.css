@@ -1,0 +1,13 @@
+.ui {
+    min-block-size: 100dvb;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: stretch;
+
+    main {
+        flex-grow: 1;
+        display: grid;
+        place-items: stretch;
+    }
+}

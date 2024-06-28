@@ -15,4 +15,7 @@
     --size-1200: calc(var(--size-base) * 12);
     --size-1400: calc(var(--size-base) * 14);
     --size-1600: calc(var(--size-base) * 16);
+    --size-content-s: 45ch;
+    --size-content-m: 60ch;
+    --size-content-l: 80ch;
 }

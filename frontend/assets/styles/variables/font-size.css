@@ -12,11 +12,11 @@
     --font-size-l6: calc(var(--font-size-l5) * var(--font-size-ratio));
     --font-size-l7: calc(var(--font-size-l6) * var(--font-size-ratio));
 
-    @media (--viewport-m) {
-        --font-size-ratio: 1.25;
+    @media (width > 640px) {
+        --font-size-ratio: 1.2;
     }
 
-    @media (--viewport-l) {
-        --font-size-ratio: 1.414;
+    @media (width > 1200px) {
+        --font-size-ratio: 1.25;
     }
 }

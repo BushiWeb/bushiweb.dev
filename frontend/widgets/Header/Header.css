@@ -1,0 +1,10 @@
+.header {
+    block-size: var(--size-1000);
+    padding: var(--space-200) var(--space-300);
+    background-color: var(--color-semantic-primary-primary-background);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-semantic-primary-on-primary-container);
+}

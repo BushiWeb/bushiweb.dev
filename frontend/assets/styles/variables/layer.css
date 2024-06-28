@@ -1,0 +1,6 @@
+:root {
+    --layer-lowest: -999;
+    --layer-low: -1;
+    --layer-high: 2;
+    --layer-highest: 999;
+}
