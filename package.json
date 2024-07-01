@@ -21,6 +21,8 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@tanstack/router-devtools": "^1.43.4",
+        "@tanstack/router-plugin": "^1.43.1",
         "@testing-library/dom": "^10.1.0",
         "@testing-library/jest-dom": "^6.4.6",
         "@testing-library/react": "^16.0.0",

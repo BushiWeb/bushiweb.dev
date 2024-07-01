@@ -26,3 +26,6 @@ dist-ssr
 .eslintcache
 .prettier-cache
 .stylelintcache
+
+# Project files
+**/routeTree.gen.ts

@@ -1,8 +1,7 @@
 import Header from 'widgets/Header';
 import './UI.css';
-// import Home from './home';
 import Footer from 'widgets/Footer';
-import LegalNotice from './legal-notice';
+import { Outlet } from '@tanstack/react-router';
 
 /* Global UI for the pages */
 export default function UI() {
@@ -10,8 +9,7 @@ export default function UI() {
         <div className="ui">
             <Header />
             <main>
-                {/* <Home /> */}
-                <LegalNotice />
+                <Outlet />
             </main>
             <Footer />
         </div>
