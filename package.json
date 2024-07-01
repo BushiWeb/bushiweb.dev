@@ -15,6 +15,8 @@
         "check:all": "npm run check:format && npm run check:lint && npm run check:csslint"
     },
     "dependencies": {
+        "@tanstack/react-router": "^1.43.2",
+        "classnames": "^2.5.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

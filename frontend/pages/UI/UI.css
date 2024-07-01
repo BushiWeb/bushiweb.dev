@@ -1,5 +1,7 @@
 .ui {
     min-block-size: 100dvb;
+    background-color: var(--color-semantic-surface-background);
+    color: var(--color-semantic-surface-on-surface);
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;

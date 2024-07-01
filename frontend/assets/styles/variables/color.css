@@ -283,4 +283,7 @@
 
     /* Outline semantics */
     --color-semantic-outline-outline: var(--color-ref-neutral-variation-70);
+    --color-semantic-outline-outline-variation: var(
+        --color-ref-neutral-variation-50
+    );
 }

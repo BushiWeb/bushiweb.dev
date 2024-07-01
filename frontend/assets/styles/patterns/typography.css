@@ -23,7 +23,7 @@
 
 .pattern-typography-title-s {
     font-family: var(--font-family-sans);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-medium);
     font-size: var(--font-size-l2);
     line-height: var(--line-height-small);
 }

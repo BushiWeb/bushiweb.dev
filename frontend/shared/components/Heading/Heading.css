@@ -1,0 +1,23 @@
+.heading {
+    text-align: center;
+
+    h1& {
+        margin-block: var(--space-100) var(--space-400);
+    }
+
+    h2& {
+        margin-block: var(--space-500) var(--space-250);
+    }
+
+    h3& {
+        margin-block: var(--space-300) var(--space-150);
+    }
+
+    @media (width > 640px) {
+        text-align: start;
+
+        h1& {
+            text-align: center;
+        }
+    }
+}

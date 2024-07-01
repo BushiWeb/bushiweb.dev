@@ -1,6 +1,6 @@
 :root {
-    --font-family-sans: 'Noto Sans';
-    --font-family-serif: 'IBM Plex Serif';
-    --font-family-mono: 'JetBrains Mono';
-    --font-family-display: 'Kaisei HarunoUmi';
+    --font-family-sans: 'Noto Sans', sans-serif;
+    --font-family-serif: 'IBM Plex Serif', serif;
+    --font-family-mono: 'JetBrains Mono', monospace;
+    --font-family-display: 'Kaisei HarunoUmi', serif;
 }
