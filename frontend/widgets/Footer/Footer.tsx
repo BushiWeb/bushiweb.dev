@@ -16,7 +16,9 @@ export default function Footer() {
                     <li>
                         <Link to="/mentions-legales">Mentions légales</Link>
                     </li>
-                    <li>A venir</li>
+                    <li>
+                        <a href="/sitemap.xml">Plan du site</a>
+                    </li>
                 </ul>
                 <p>Copyright © 2024 Emeric Francisod, tous droits réservés</p>
             </nav>

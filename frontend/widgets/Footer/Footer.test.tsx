@@ -18,4 +18,11 @@ test('The Footer component renders with the logo and the links', () => {
         'href',
         expect.stringContaining('mentions-legales'),
     );
+
+    // sitemap link test
+    const sitemapLink = getByRole('link', { name: 'Plan du site' });
+    expect(sitemapLink).toHaveAttribute(
+        'href',
+        expect.stringContaining('sitemap.xml'),
+    );
 });
