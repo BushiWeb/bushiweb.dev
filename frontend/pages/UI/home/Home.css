@@ -1,5 +1,6 @@
 .home {
     background-color: var(--color-semantic-primary-primary-container);
+    min-block-size: calc(100dvb - var(--size-1000));
     position: relative;
     isolation: isolate;
     display: flex;
