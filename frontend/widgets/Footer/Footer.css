@@ -1,13 +1,58 @@
 .footer {
-    padding: var(--space-150) var(--space-300);
     background-color: var(--color-semantic-primary-primary-background);
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     color: var(--color-semantic-primary-on-primary-container);
+
+    div {
+        padding: var(--space-150) var(--space-300);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: var(--space-200);
+    }
 
     .logo {
         block-size: var(--size-500);
+    }
+
+    nav {
+        padding: var(--space-150) var(--space-300);
+        background-color: var(--color-semantic-surface-background);
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: var(--space-150);
+        color: var(--color-semantic-surface-on-surface-variant);
+        text-align: center;
+
+        @media (width > 1024px) {
+            padding: var(--space-200) var(--space-500);
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            gap: var(--space-50);
+        }
+
+        li {
+            padding-inline: var(--space-100);
+            border-inline-end: var(--color-semantic-outline-outline)
+                var(--border-width-10) solid;
+
+            &:last-child {
+                border: none;
+            }
+        }
+
+        a {
+            color: inherit;
+        }
     }
 }

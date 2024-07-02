@@ -1,6 +1,18 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
-import { afterEach } from 'vitest';
+import React from 'react';
+import { afterEach, vi } from 'vitest';
+
+vi.mock('@tanstack/react-router', async (importOriginal) => {
+    const mod = await importOriginal<typeof import('@tanstack/react-router')>();
+    return {
+        ...mod,
+        // replace some exports
+        Link: ({ to, children }: { to?: string; children: React.ReactNode }) =>
+            React.createElement('a', { href: to }, children),
+        Outlet: () => React.createElement('div'),
+    };
+});
 
 afterEach(() => {
     cleanup();

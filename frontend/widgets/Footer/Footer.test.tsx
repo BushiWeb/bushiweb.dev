@@ -1,9 +1,21 @@
 import { render } from 'shared/tests/tests-utils';
-import { test } from 'vitest';
+import { expect, test } from 'vitest';
 import Footer from './Footer';
 
-test('The Footer component renders with the logo', () => {
+test('The Footer component renders with the logo and the links', () => {
+    const logoName = 'BushiWeb';
     const { getByRole } = render(<Footer />);
     getByRole('contentinfo');
-    getByRole('img', { name: 'BushiWeb' });
+
+    // Logo and home link test
+    const homeLink = getByRole('link', { name: logoName });
+    getByRole('img', { name: logoName });
+    expect(homeLink).toHaveAttribute('href', '/');
+
+    // Legal notice link test
+    const legalNoticeLink = getByRole('link', { name: 'Mentions légales' });
+    expect(legalNoticeLink).toHaveAttribute(
+        'href',
+        expect.stringContaining('mentions-legales'),
+    );
 });
