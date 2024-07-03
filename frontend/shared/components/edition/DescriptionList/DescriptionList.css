@@ -23,7 +23,7 @@
 }
 
 .description-list-term {
-    margin-block-end: var(--space-50);
+    margin-block-end: var(--space-100);
     font-weight: var(--font-weight-semi-bold);
 }
 

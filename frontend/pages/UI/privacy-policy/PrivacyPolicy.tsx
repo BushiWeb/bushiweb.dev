@@ -1,7 +1,7 @@
 import CollectedData from './CollectedData';
 import './PrivacyPolicy.css';
 import data from './PrivacyPolicy.data';
-import { Paragraph, Link, Heading } from 'shared/components/edition';
+import { Paragraph, Link, Heading, List as L } from 'shared/components/edition';
 
 /* Privacy policy page component */
 export default function PrivacyPolicy() {
@@ -19,12 +19,18 @@ export default function PrivacyPolicy() {
                 Le but de cette politique de confidentialité est d&apos;informer
                 les utilisateurs de notre site concernant:
             </Paragraph>
-            <ul>
-                <li>les données personnelles que nous recueillons;</li>
-                <li>l&apos;utilisation des données recueillies;</li>
-                <li>les personnes ayant accès aux données recueillies;</li>
-                <li>les droits des utilisateurs du site.</li>
-            </ul>
+            <L.List>
+                <L.ListItem>
+                    les données personnelles que nous recueillons;
+                </L.ListItem>
+                <L.ListItem>
+                    l&apos;utilisation des données recueillies;
+                </L.ListItem>
+                <L.ListItem>
+                    les personnes ayant accès aux données recueillies;
+                </L.ListItem>
+                <L.ListItem>les droits des utilisateurs du site.</L.ListItem>
+            </L.List>
 
             <Heading level={2}>Vos droits en tant qu&apos;utilisateur</Heading>
             <Paragraph>
@@ -35,14 +41,14 @@ export default function PrivacyPolicy() {
                 , les utilisateurs ont les droits suivants en tant que personne
                 concernées:
             </Paragraph>
-            <ul>
-                <li>droit d&apos;accès;</li>
-                <li>droit de rectification;</li>
-                <li>droit à l&apos;effacement;</li>
-                <li>droit de restreindre le traitement;</li>
-                <li>droit à la portabilité des données;</li>
-                <li>droit d&apos;objection;</li>
-            </ul>
+            <L.List>
+                <L.ListItem>droit d&apos;accès;</L.ListItem>
+                <L.ListItem>droit de rectification;</L.ListItem>
+                <L.ListItem>droit à l&apos;effacement;</L.ListItem>
+                <L.ListItem>droit de restreindre le traitement;</L.ListItem>
+                <L.ListItem>droit à la portabilité des données;</L.ListItem>
+                <L.ListItem>droit d&apos;objection;</L.ListItem>
+            </L.List>
             <Paragraph>
                 Vous trouverez de plus amples informations sur ces droits au{' '}
                 <em>chapitre 3 (art 12-23) du RGPD</em>.
@@ -54,26 +60,26 @@ export default function PrivacyPolicy() {
                 modifiés d&apos;une façon ou d&apos;une autre, vous pouvez nous
                 le communiquer via:
             </Paragraph>
-            <ul>
-                <li>
+            <L.List>
+                <L.ListItem>
                     le <Link to="/contact">formulaire de contact</Link> du site
                     internet;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     email à{' '}
                     <Link href={`mailto:${data.owner.email}`}>
                         {data.owner.email}
                     </Link>
                     ;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     téléphone ou SMS au{' '}
                     <Link href={`tel:${data.owner.phone}`}>
                         {data.owner.phone}
                     </Link>
                     .
-                </li>
-            </ul>
+                </L.ListItem>
+            </L.List>
             <Paragraph>
                 Dans le but de simplifier et accélérer la procédure, merci de
                 nous communiquer un moyen de vous identifier dans le but de
@@ -119,12 +125,12 @@ export default function PrivacyPolicy() {
             <Paragraph>
                 Les données à caractère personnel doivent être:
             </Paragraph>
-            <ul>
-                <li>
+            <L.List>
+                <L.ListItem>
                     traitées de manière licite, loyale et transparente au regard
                     de la personne concernée (licéité, loyauté, transparence);
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     collectées pour des finalités déterminées, explicites et
                     légitimes, et ne pas être traitées ultérieurement d&apos;une
                     manière incompatible avec ces finalités; le traitement
@@ -134,20 +140,20 @@ export default function PrivacyPolicy() {
                     conformément à <em>l&apos;article 86, paragraphe 1</em>,
                     comme incompatible avec les finalités initiales (limitation
                     des finalités);
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     adéquates, pertinentes et limitées à ce qui est nécessaire
                     au regard des finalités pour lesquelles elles sont traitées
                     (minimisation des données);
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     exactes et, si nécessaire, tenues à jour; toutes les mesures
                     raisonnables doivent être prises pour que les données à
                     caractère personnel qui sont inexactes, eu égard aux
                     finalités pour lesquelles elles sont traitées, soient
                     effacées ou rectifiées sans tarder (exactitude);
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     conservées sous une forme permettant l&apos;identification
                     des personnes concernées pendant une durée n&apos;excédant
                     pas celle nécessaire au regard des finalités pour lesquelles
@@ -162,8 +168,8 @@ export default function PrivacyPolicy() {
                     organisationnelles appropriées requises par le règlement
                     afin de garantir les droits et libertés de la personne
                     concernée (limitation de la conservation);
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     traitées de façon à garantir une sécurité appropriée des
                     données à caractère personnel, y compris la protection
                     contre le traitement non autorisé ou illicite et contre la
@@ -171,49 +177,49 @@ export default function PrivacyPolicy() {
                     accidentelle, à l&apos;aide de mesures techniques ou
                     organisationnelles appropriées (intégrité et
                     confidentialité).
-                </li>
-            </ul>
+                </L.ListItem>
+            </L.List>
             <Paragraph>
                 Le traitement n&apos;est licite que si, et dans la mesure où, au
                 moins une des conditions suivantes est remplie:
             </Paragraph>
-            <ul>
-                <li>
+            <L.List>
+                <L.ListItem>
                     la personne concernée a consenti au traitement de ses
                     données à caractère personnel pour une ou plusieurs
                     finalités spécifiques;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     le traitement est nécessaire à l&apos;exécution d&apos;un
                     contrat auquel la personne concernée est partie, ou à
                     l&apos;exécution de mesures précontractuelles prises à la
                     demande de celle-ci;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     le traitement est nécessaire au respect d&apos;une
                     obligation légales à laquelle le responsable du traitement
                     est soumis;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     le traitement est nécessaire à la sauvegarde des intérêts
                     vitaux de la personne concernée ou d&apos;une autre personne
                     physique;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     le traitement est nécessaire à l&apos;exécution d&apos;une
                     mission d&apos;intérêt public ou relevant de l&apos;exercice
                     de l&apos;autorité publique dont est investi le responsable
                     du traitement;
-                </li>
-                <li>
+                </L.ListItem>
+                <L.ListItem>
                     le traitement est nécessaire aux fins des intérêts légitimes
                     poursuivis par le responsable du traitement ou par un tiers,
                     à moins que ne prévalent les intérêts ou les libertés et
                     droits fondamentaux de la personne concernée qui exige une
                     protection des données à caractère personnel, notamment
                     lorsque la personne concernée est un enfant.
-                </li>
-            </ul>
+                </L.ListItem>
+            </L.List>
 
             <Heading level={2}>Modifications</Heading>
             <Paragraph>
@@ -235,22 +241,22 @@ export default function PrivacyPolicy() {
                 communiquer avec nous en utilisant les moyens suivants:
             </Paragraph>
             <address>
-                <ul>
-                    <li>
+                <L.List>
+                    <L.ListItem>
                         email:{' '}
                         <Link href={`mailto:${data.owner.email}`}>
                             {data.owner.email}
                         </Link>
                         ;
-                    </li>
-                    <li>
+                    </L.ListItem>
+                    <L.ListItem>
                         téléphone:{' '}
                         <Link href={`tel:${data.owner.phone}`}>
                             {data.owner.phone}
                         </Link>
                         .
-                    </li>
-                </ul>
+                    </L.ListItem>
+                </L.List>
             </address>
         </div>
     );

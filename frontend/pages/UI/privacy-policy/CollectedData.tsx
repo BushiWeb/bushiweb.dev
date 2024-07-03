@@ -3,6 +3,7 @@ import {
     Paragraph,
     Heading,
     DescriptionList as DL,
+    List as L,
 } from 'shared/components/edition';
 import React from 'react';
 
@@ -21,15 +22,19 @@ export default function CollectedData() {
                 Nous nous engageons à ne pas vendre ou partager vos données avec
                 des tiers non précisés, sauf dans les cas suivants:
             </Paragraph>
-            <ul>
-                <li>si la loi l&apos;exige;</li>
-                <li>si elle est requise pour toute procédure judiciaire;</li>
-                <li>pour prouver ou protéger nos droits légaux;</li>
-                <li>
+            <L.List>
+                <L.ListItem>si la loi l&apos;exige;</L.ListItem>
+                <L.ListItem>
+                    si elle est requise pour toute procédure judiciaire;
+                </L.ListItem>
+                <L.ListItem>
+                    pour prouver ou protéger nos droits légaux;
+                </L.ListItem>
+                <L.ListItem>
                     à des acheteurs de cette entreprise dans le cas où nous
                     cherchons à vendre l&apos;entreprise.
-                </li>
-            </ul>
+                </L.ListItem>
+            </L.List>
             <Paragraph>
                 Alors que nous prenons toutes les précautions raisonnables pour
                 nous assurer que nos données d&apos;utilisateur sont sécurisées

@@ -1,0 +1,17 @@
+.edition-list {
+    margin-block: var(--space-200) var(--space-250);
+    padding-inline-start: var(--space-500);
+
+    &.ordered-list {
+        list-style-type: decimal;
+    }
+
+    &.unordered-list {
+        list-style-type: disc;
+    }
+}
+
+.edition-list-item {
+    margin-block-end: var(--space-100);
+    padding-inline-start: var(--space-50);
+}
