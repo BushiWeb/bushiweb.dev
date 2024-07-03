@@ -1,7 +1,6 @@
-import Heading from 'shared/components/edition/Heading';
 import './LegalNotice.css';
 import data from './LegalNotice.data';
-import Paragraph from 'shared/components/edition/Paragraph';
+import { Paragraph, Link, Heading } from 'shared/components/edition';
 
 /* Legal notice page page */
 export default function LegalNotice() {
@@ -13,9 +12,9 @@ export default function LegalNotice() {
             </Paragraph>
             <Paragraph>
                 Merci au générateur{' '}
-                <a href="https://la-webeuse.com/generateur-mentions-legales/">
+                <Link href="https://la-webeuse.com/generateur-mentions-legales/">
                     https://la-webeuse.com/generateur-mentions-legales/
-                </a>{' '}
+                </Link>{' '}
                 pour l&apos;aide apporté lors de la création de ces mentions
                 légales.
             </Paragraph>
@@ -23,13 +22,14 @@ export default function LegalNotice() {
             <Heading level={2}>Édition du site</Heading>
             <Paragraph>
                 En vertu de{' '}
-                <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000801164#LEGIARTI000042038977">
+                <Link href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000801164#LEGIARTI000042038977">
                     l&apos;article 6 de la loi n° 2004-575 du 21 juin 2004
-                </a>{' '}
+                </Link>{' '}
                 pour la confiance dans l&apos;économie numérique, il est précisé
                 aux utilisateurs du site internet{' '}
-                <a href={data.url}>{data.url}</a> l&apos;identité des différents
-                intervenants dans le cadre de sa réalisation et de son suivi.
+                <Link href={data.url}>{data.url}</Link> l&apos;identité des
+                différents intervenants dans le cadre de sa réalisation et de
+                son suivi.
             </Paragraph>
 
             <Heading level={3}>Propriétaire du site</Heading>
@@ -48,9 +48,9 @@ export default function LegalNotice() {
                     <dt>Email</dt>
                     <dd>
                         <address>
-                            <a href={`mailto:${data.owner.email}`}>
+                            <Link href={`mailto:${data.owner.email}`}>
                                 {data.owner.email}
-                            </a>
+                            </Link>
                         </address>
                     </dd>
                 </div>
@@ -58,9 +58,9 @@ export default function LegalNotice() {
                     <dt>Téléphone</dt>
                     <dd>
                         <address>
-                            <a href={`tel:${data.owner.phone}`}>
+                            <Link href={`tel:${data.owner.phone}`}>
                                 {data.owner.phone}
-                            </a>
+                            </Link>
                         </address>
                     </dd>
                 </div>
@@ -110,9 +110,9 @@ export default function LegalNotice() {
                     <dt>Email</dt>
                     <dd>
                         <address>
-                            <a href={`mailto:${data.host.email}`}>
+                            <Link href={`mailto:${data.host.email}`}>
                                 {data.host.email}
-                            </a>
+                            </Link>
                         </address>
                     </dd>
                 </div>
@@ -120,9 +120,9 @@ export default function LegalNotice() {
                     <dt>Téléphone</dt>
                     <dd>
                         <address>
-                            <a href={`tel:${data.host.phone}`}>
+                            <Link href={`tel:${data.host.phone}`}>
                                 {data.host.phone}
-                            </a>
+                            </Link>
                         </address>
                     </dd>
                 </div>
@@ -149,9 +149,9 @@ export default function LegalNotice() {
                 éléments qu&apos;il contient sera considérée comme constitutive
                 d&apos;une contrefaçon et poursuivie conformément aux
                 disposition des articles{' '}
-                <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032655082">
+                <Link href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032655082">
                     L.335-2 et suivants du Code de Propriété Intellectuelle
-                </a>
+                </Link>
                 .
             </Paragraph>
 
@@ -196,23 +196,23 @@ export default function LegalNotice() {
             <Heading level={2}>CNIL et gestion des données</Heading>
             <Paragraph>
                 Conformément aux dispositions de{' '}
-                <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460">
+                <Link href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460">
                     la loi 78-17 du 6 janvier 1978 modifiée
-                </a>
+                </Link>
                 , l&apos;utilisateur du site <em>https://bushiweb.dev</em>{' '}
                 dispose d&apos;un droit d&apos;accès, de modification et de
                 suppression des informations collectées. Pour exercer ce droit,
                 envoyez un message à{' '}
-                <a href="mailto:epf@bushiweb.dev">epf@bushiweb.dev</a> .
+                <Link href="mailto:epf@bushiweb.dev">epf@bushiweb.dev</Link> .
             </Paragraph>
 
             <Paragraph>
                 Pour plus d&apos;informations sur la façon dont nous traitons
                 vos données (type de données, finalité, destinataire...), lisez
                 notre{' '}
-                <a href="/politique-de-confidentialite">
+                <Link href="/politique-de-confidentialite">
                     politique de confidentialité
-                </a>
+                </Link>
                 .
             </Paragraph>
 
@@ -233,9 +233,9 @@ export default function LegalNotice() {
             <Paragraph>
                 Pour plus d&apos;informations sur ce qu&apos;est un cookie et
                 sur la façon dont nous faisons usage des cookies, lisez notre{' '}
-                <a href="/politique-sur-les-cookies">
+                <Link href="/politique-sur-les-cookies">
                     politique sur les cookie{' '}
-                </a>
+                </Link>
                 .
             </Paragraph>
 

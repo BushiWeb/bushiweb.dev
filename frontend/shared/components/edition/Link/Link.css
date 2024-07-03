@@ -1,0 +1,14 @@
+.edition-link {
+    color: var(--color-semantic-primary-on-primary-container);
+    text-decoration: none;
+
+    @media (hover: hover) {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &:visited {
+        color: var(--color-semantic-secondary-on-secondary-container);
+    }
+}

@@ -1,8 +1,6 @@
-import Heading from 'shared/components/edition/Heading';
 import './PrivacyPolicy.css';
 import data from './PrivacyPolicy.data';
-import Paragraph from 'shared/components/edition/Paragraph';
-import { Link } from '@tanstack/react-router';
+import { Paragraph, Link, Heading } from 'shared/components/edition';
 
 /* Legal notice page page */
 export default function PrivacyPolicy() {
@@ -62,14 +60,17 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                     email à{' '}
-                    <a href={`mailto:${data.owner.email}`}>
+                    <Link href={`mailto:${data.owner.email}`}>
                         {data.owner.email}
-                    </a>
+                    </Link>
                     ;
                 </li>
                 <li>
                     téléphone ou SMS au{' '}
-                    <a href={`tel:${data.owner.phone}`}>{data.owner.phone}</a>.
+                    <Link href={`tel:${data.owner.phone}`}>
+                        {data.owner.phone}
+                    </Link>
+                    .
                 </li>
             </ul>
             <Paragraph>
@@ -338,16 +339,16 @@ export default function PrivacyPolicy() {
                 <ul>
                     <li>
                         email:{' '}
-                        <a href={`mailto:${data.owner.email}`}>
+                        <Link href={`mailto:${data.owner.email}`}>
                             {data.owner.email}
-                        </a>
+                        </Link>
                         ;
                     </li>
                     <li>
                         téléphone:{' '}
-                        <a href={`tel:${data.owner.phone}`}>
+                        <Link href={`tel:${data.owner.phone}`}>
                             {data.owner.phone}
-                        </a>
+                        </Link>
                         .
                     </li>
                 </ul>
