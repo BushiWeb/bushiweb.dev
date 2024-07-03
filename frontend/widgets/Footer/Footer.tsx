@@ -17,6 +17,11 @@ export default function Footer() {
                         <Link to="/mentions-legales">Mentions légales</Link>
                     </li>
                     <li>
+                        <Link to="/politique-de-confidentialite">
+                            Politique de confidentialité
+                        </Link>
+                    </li>
+                    <li>
                         <a href="/sitemap.xml">Plan du site</a>
                     </li>
                 </ul>

@@ -1,0 +1,5 @@
+.privacy-policy {
+    padding: var(--space-400) var(--space-300);
+    max-inline-size: var(--size-content-l);
+    justify-self: center;
+}

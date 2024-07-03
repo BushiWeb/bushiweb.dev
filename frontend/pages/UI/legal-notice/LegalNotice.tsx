@@ -1,7 +1,7 @@
-import Heading from 'shared/components/Heading';
+import Heading from 'shared/components/edition/Heading';
 import './LegalNotice.css';
 import data from './LegalNotice.data';
-import Paragraph from 'shared/components/Paragraph';
+import Paragraph from 'shared/components/edition/Paragraph';
 
 /* Legal notice page page */
 export default function LegalNotice() {
@@ -40,22 +40,28 @@ export default function LegalNotice() {
                 </div>
                 <div>
                     <dt>Adresse</dt>
-                    <dd>{data.owner.address}</dd>
+                    <dd>
+                        <address>{data.owner.address}</address>
+                    </dd>
                 </div>
                 <div>
                     <dt>Email</dt>
                     <dd>
-                        <a href={`mailto:${data.owner.email}`}>
-                            {data.owner.email}
-                        </a>
+                        <address>
+                            <a href={`mailto:${data.owner.email}`}>
+                                {data.owner.email}
+                            </a>
+                        </address>
                     </dd>
                 </div>
                 <div>
                     <dt>Téléphone</dt>
                     <dd>
-                        <a href={`tel:${data.owner.phone}`}>
-                            {data.owner.phone}
-                        </a>
+                        <address>
+                            <a href={`tel:${data.owner.phone}`}>
+                                {data.owner.phone}
+                            </a>
+                        </address>
                     </dd>
                 </div>
             </dl>
@@ -96,20 +102,28 @@ export default function LegalNotice() {
                 </div>
                 <div>
                     <dt>Adresse</dt>
-                    <dd>{data.host.address}</dd>
+                    <dd>
+                        <address>{data.host.address}</address>
+                    </dd>
                 </div>
                 <div>
                     <dt>Email</dt>
                     <dd>
-                        <a href={`mailto:${data.host.email}`}>
-                            {data.host.email}
-                        </a>
+                        <address>
+                            <a href={`mailto:${data.host.email}`}>
+                                {data.host.email}
+                            </a>
+                        </address>
                     </dd>
                 </div>
                 <div>
                     <dt>Téléphone</dt>
                     <dd>
-                        <a href={`tel:${data.host.phone}`}>{data.host.phone}</a>
+                        <address>
+                            <a href={`tel:${data.host.phone}`}>
+                                {data.host.phone}
+                            </a>
+                        </address>
                     </dd>
                 </div>
             </dl>
@@ -196,7 +210,7 @@ export default function LegalNotice() {
                 Pour plus d&apos;informations sur la façon dont nous traitons
                 vos données (type de données, finalité, destinataire...), lisez
                 notre{' '}
-                <a href={data.links.privacyPolicy}>
+                <a href="/politique-de-confidentialite">
                     politique de confidentialité
                 </a>
                 .
@@ -219,7 +233,10 @@ export default function LegalNotice() {
             <Paragraph>
                 Pour plus d&apos;informations sur ce qu&apos;est un cookie et
                 sur la façon dont nous faisons usage des cookies, lisez notre{' '}
-                <a href={data.links.cookiePolicy}>politique de cookie </a>.
+                <a href="/politique-sur-les-cookies">
+                    politique sur les cookie{' '}
+                </a>
+                .
             </Paragraph>
 
             <Heading level={2}>
