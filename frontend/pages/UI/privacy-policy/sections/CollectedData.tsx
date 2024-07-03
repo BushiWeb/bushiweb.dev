@@ -1,4 +1,4 @@
-import data from './PrivacyPolicy.data';
+import data from '../PrivacyPolicy.data';
 import {
     Paragraph,
     Heading,
