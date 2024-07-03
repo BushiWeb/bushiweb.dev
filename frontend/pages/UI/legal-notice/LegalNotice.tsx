@@ -1,6 +1,11 @@
 import './LegalNotice.css';
 import data from './LegalNotice.data';
-import { Paragraph, Link, Heading } from 'shared/components/edition';
+import {
+    Paragraph,
+    Link,
+    Heading,
+    DescriptionList as DL,
+} from 'shared/components/edition';
 
 /* Legal notice page page */
 export default function LegalNotice() {
@@ -33,100 +38,96 @@ export default function LegalNotice() {
             </Paragraph>
 
             <Heading level={3}>Propriétaire du site</Heading>
-            <dl>
-                <div>
-                    <dt>Identité</dt>
-                    <dd>{data.owner.fullName}</dd>
-                </div>
-                <div>
-                    <dt>Adresse</dt>
-                    <dd>
-                        <address>{data.owner.address}</address>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Email</dt>
-                    <dd>
+            <DL.DescriptionList>
+                <DL.DescriptionListItem
+                    terms="Identité"
+                    descriptions={data.owner.fullName}
+                />
+                <DL.DescriptionListItem
+                    terms="Adresse"
+                    descriptions={data.owner.address}
+                />
+                <DL.DescriptionListItem
+                    terms="Email"
+                    descriptions={
                         <address>
                             <Link href={`mailto:${data.owner.email}`}>
                                 {data.owner.email}
                             </Link>
                         </address>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Téléphone</dt>
-                    <dd>
+                    }
+                />
+                <DL.DescriptionListItem
+                    terms="Téléphone"
+                    descriptions={
                         <address>
                             <Link href={`tel:${data.owner.phone}`}>
                                 {data.owner.phone}
                             </Link>
                         </address>
-                    </dd>
-                </div>
-            </dl>
+                    }
+                />
+            </DL.DescriptionList>
 
             <Heading level={3}>Identification de l&apos;entreprise</Heading>
-            <dl>
-                <div>
-                    <dt>Raison sociale</dt>
-                    <dd>{data.company.companyName}</dd>
-                </div>
-                <div>
-                    <dt>Nom commercial</dt>
-                    <dd>{data.company.businessName}</dd>
-                </div>
-                <div>
-                    <dt>Numéro SIREN</dt>
-                    <dd>{data.company.siren}</dd>
-                </div>
-                <div>
-                    <dt>RCS</dt>
-                    <dd>{data.company.rcs}</dd>
-                </div>
-                <div>
-                    <dt>Adress</dt>
-                    <dd>{data.company.address}</dd>
-                </div>
-                <div>
-                    <dt>Numéro de TVA</dt>
-                    <dd>{data.company.vat}</dd>
-                </div>
-            </dl>
+            <DL.DescriptionList>
+                <DL.DescriptionListItem
+                    terms="Raison sociale"
+                    descriptions={data.company.companyName}
+                />
+                <DL.DescriptionListItem
+                    terms="Nom commercial"
+                    descriptions={data.company.businessName}
+                />
+                <DL.DescriptionListItem
+                    terms="Numéro SIREN"
+                    descriptions={data.company.siren}
+                />
+                <DL.DescriptionListItem
+                    terms="RCS"
+                    descriptions={data.company.rcs}
+                />
+                <DL.DescriptionListItem
+                    terms="Adresse"
+                    descriptions={data.company.address}
+                />
+                <DL.DescriptionListItem
+                    terms="Numéro de TVA"
+                    descriptions={data.company.vat}
+                />
+            </DL.DescriptionList>
 
             <Heading level={3}>Hébergeur</Heading>
-            <dl>
-                <div>
-                    <dt>Raison sociale</dt>
-                    <dd>{data.host.companyName}</dd>
-                </div>
-                <div>
-                    <dt>Adresse</dt>
-                    <dd>
-                        <address>{data.host.address}</address>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Email</dt>
-                    <dd>
+            <DL.DescriptionList>
+                <DL.DescriptionListItem
+                    terms="Raison sociale"
+                    descriptions={data.host.companyName}
+                />
+                <DL.DescriptionListItem
+                    terms="Adresse"
+                    descriptions={data.host.address}
+                />
+                <DL.DescriptionListItem
+                    terms="Email"
+                    descriptions={
                         <address>
                             <Link href={`mailto:${data.host.email}`}>
                                 {data.host.email}
                             </Link>
                         </address>
-                    </dd>
-                </div>
-                <div>
-                    <dt>Téléphone</dt>
-                    <dd>
+                    }
+                />
+                <DL.DescriptionListItem
+                    terms="Téléphone"
+                    descriptions={
                         <address>
                             <Link href={`tel:${data.host.phone}`}>
                                 {data.host.phone}
                             </Link>
                         </address>
-                    </dd>
-                </div>
-            </dl>
+                    }
+                />
+            </DL.DescriptionList>
 
             <Heading level={2}>
                 Propriété intellectuelle et contrefaçons

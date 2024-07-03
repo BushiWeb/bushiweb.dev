@@ -1,0 +1,32 @@
+.description-list {
+    inline-size: 90%;
+    margin: var(--space-300) auto;
+    background-color: var(--color-semantic-surface-layer3);
+    color: var(--color-semantic-surface-on-surface);
+    font-family: var(--font-family-sans);
+    border-radius: var(--border-radius-300);
+}
+
+.description-list-item {
+    padding: var(--space-150) var(--space-200);
+    border-block-end: var(--color-semantic-outline-outline-variation)
+        var(--border-width-10) solid;
+
+    &:first-child {
+        padding-block-start: var(--space-200);
+    }
+
+    &:last-child {
+        padding-block-end: var(--space-200);
+        border: none;
+    }
+}
+
+.description-list-term {
+    margin-block-end: var(--space-50);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.description-list-description {
+    padding-inline-start: var(--space-200);
+}

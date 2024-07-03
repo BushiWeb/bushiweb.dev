@@ -1,4 +1,35 @@
-const WEBSITE_DATA = {
+interface Owner {
+    fullName: string;
+    email: string;
+    phone: string;
+    address: string;
+}
+
+interface Company {
+    companyName: string;
+    businessName: string;
+    siren: string;
+    rcs: string;
+    address: string;
+    vat: string;
+}
+
+interface Host {
+    name: string;
+    companyName: string;
+    address: string;
+    phone: string;
+    email: string;
+}
+
+export interface WebsiteInformations {
+    url: string;
+    owner: Owner;
+    company: Company;
+    host: Host;
+}
+
+const WEBSITE_DATA: WebsiteInformations = {
     url: 'https://bushiweb.dev',
 
     owner: {
