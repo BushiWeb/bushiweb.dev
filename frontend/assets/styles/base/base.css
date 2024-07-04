@@ -9,3 +9,7 @@ em {
 strong {
     font-weight: var(--font-weight-bold);
 }
+
+table {
+    border-collapse: collapse;
+}

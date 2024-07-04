@@ -21,10 +21,7 @@ export default function HypertextAndCookies() {
             <Paragraph>
                 Pour plus d&apos;informations sur ce qu&apos;est un cookie et
                 sur la façon dont nous faisons usage des cookies, lisez notre{' '}
-                <Link href="/politique-sur-les-cookies">
-                    politique sur les cookie{' '}
-                </Link>
-                .
+                <Link href="/politique-de-cookies">politique de cookies </Link>.
             </Paragraph>
         </>
     );

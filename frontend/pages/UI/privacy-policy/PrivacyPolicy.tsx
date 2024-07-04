@@ -1,4 +1,3 @@
-import CollectedData from './sections/CollectedData';
 import './PrivacyPolicy.css';
 import data from './PrivacyPolicy.data';
 import { Paragraph, Heading } from 'shared/components/edition';
@@ -10,6 +9,7 @@ import {
     Laws,
     Updates,
     Contact,
+    CollectedData,
 } from './sections';
 
 /* Privacy policy page component */

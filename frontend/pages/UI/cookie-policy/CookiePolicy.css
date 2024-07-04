@@ -1,0 +1,92 @@
+.cookie-policy {
+    padding: var(--space-400) var(--space-300);
+    max-inline-size: var(--size-content-l);
+    justify-self: center;
+
+    table {
+        margin: var(--space-300) auto var(--space-400);
+        border-radius: var(--border-radius-300);
+        color: var(--color-semantic-surface-on-surface);
+        font-family: var(--font-family-sans);
+        overflow: hidden;
+        inline-size: 100%;
+
+        @media (width <=640px) {
+            display: block;
+            border-radius: 0;
+        }
+
+        tr {
+            @media (width <= 640px) {
+                display: block;
+                inline-size: 100%;
+                background-color: initial;
+                border-radius: var(--border-radius-300);
+                overflow: hidden;
+                margin-block: var(--space-200);
+            }
+
+            &:nth-child(even) {
+                background-color: var(--color-semantic-surface-layer3);
+            }
+
+            &:nth-child(odd) {
+                background-color: var(--color-semantic-surface-layer2);
+            }
+
+            &:first-child {
+                background-color: var(
+                    --color-semantic-primary-primary-container
+                );
+                color: var(--color-semantic-primary-on-primary-container);
+
+                @media (width <= 640px) {
+                    clip: rect(0 0 0 0);
+                    clip-path: inset(50%);
+                    block-size: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                    white-space: nowrap;
+                    inline-size: 1px;
+                }
+            }
+
+            td {
+                padding: var(--space-100);
+
+                @media (width <=640px) {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    gap: var(--space-200);
+
+                    &:nth-child(even) {
+                        background-color: var(--color-semantic-surface-layer2);
+                    }
+
+                    &:nth-child(odd) {
+                        background-color: var(--color-semantic-surface-layer3);
+                    }
+
+                    &::before {
+                        content: attr(data-header);
+                        inline-size: 33%;
+                        flex-shrink: 0;
+                    }
+                }
+
+                p {
+                    margin-block-end: var(--space-100);
+                }
+            }
+        }
+
+        th {
+            padding: var(--space-100);
+
+            @media (width <=640px) {
+                display: block;
+            }
+        }
+    }
+}

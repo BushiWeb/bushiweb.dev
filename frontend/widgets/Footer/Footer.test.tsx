@@ -19,6 +19,22 @@ test('The Footer component renders with the logo and the links', () => {
         expect.stringContaining('mentions-legales'),
     );
 
+    // Privacy policy link test
+    const privacyPolicy = getByRole('link', {
+        name: 'Politique de confidentialité',
+    });
+    expect(privacyPolicy).toHaveAttribute(
+        'href',
+        expect.stringContaining('politique-de-confidentialite'),
+    );
+
+    // Cookie policy link test
+    const cookiePolicy = getByRole('link', { name: 'Politique de cookies' });
+    expect(cookiePolicy).toHaveAttribute(
+        'href',
+        expect.stringContaining('politique-de-cookies'),
+    );
+
     // sitemap link test
     const sitemapLink = getByRole('link', { name: 'Plan du site' });
     expect(sitemapLink).toHaveAttribute(

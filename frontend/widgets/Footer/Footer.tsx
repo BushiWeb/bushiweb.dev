@@ -22,6 +22,11 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
+                        <Link to="/politique-de-cookies">
+                            Politique de cookies
+                        </Link>
+                    </li>
+                    <li>
                         <a href="/sitemap.xml">Plan du site</a>
                     </li>
                 </ul>
