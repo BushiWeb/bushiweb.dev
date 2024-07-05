@@ -12,6 +12,18 @@ test('The Footer component renders with the logo and the links', () => {
     getByRole('img', { name: logoName });
     expect(homeLink).toHaveAttribute('href', '/');
 
+    // Social link tests
+    const linkedInLinkElt = getByRole('link', { name: /LinkedIn/ });
+    expect(linkedInLinkElt).toHaveAttribute(
+        'href',
+        'https://www.linkedin.com/in/emeric-francisod',
+    );
+    const gitHubLinkElt = getByRole('link', { name: /GitHub/ });
+    expect(gitHubLinkElt).toHaveAttribute(
+        'href',
+        'https://github.com/BushiWeb',
+    );
+
     // Legal notice link test
     const legalNoticeLink = getByRole('link', { name: 'Mentions légales' });
     expect(legalNoticeLink).toHaveAttribute(

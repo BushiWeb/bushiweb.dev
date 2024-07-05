@@ -1,17 +1,36 @@
 import Logo from 'shared/components/Logo';
 import './Footer.css';
 import { Link } from '@tanstack/react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 /* Global UI Footer */
 export default function Footer() {
     return (
         <footer className="footer">
-            <div>
+            <div className="footer-content">
                 <Link to="/">
                     <Logo className="logo" height={40} />
                 </Link>
+                <div className="footer-icons">
+                    <a
+                        href="https://www.linkedin.com/in/emeric-francisod"
+                        className="linkedin"
+                    >
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            title="Mon profil LinkedIn"
+                        />
+                    </a>
+                    <a href="https://github.com/BushiWeb" className="github">
+                        <FontAwesomeIcon
+                            icon={faGithub}
+                            title="Ma page GitHub"
+                        />
+                    </a>
+                </div>
             </div>
-            <nav className="pattern-typography-body-s">
+            <nav className="pattern-typography-body-s footer-navigation">
                 <ul>
                     <li>
                         <Link to="/mentions-legales">Mentions légales</Link>

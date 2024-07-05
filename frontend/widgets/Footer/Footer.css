@@ -6,20 +6,56 @@
     align-items: stretch;
     color: var(--color-semantic-primary-on-primary-container);
 
-    div {
+    .footer-content {
         padding: var(--space-150) var(--space-300);
         display: flex;
         flex-flow: column nowrap;
         justify-content: start;
         align-items: center;
         gap: var(--space-200);
+
+        @media (width > 1024px) {
+            padding: var(--space-250) var(--space-500);
+            flex-flow: row wrap;
+            justify-content: space-between;
+            border: green;
+        }
     }
 
     .logo {
         block-size: var(--size-500);
     }
 
-    nav {
+    .footer-icons {
+        padding: var(--space-150);
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: var(--space-250);
+
+        a {
+            font-size: var(--size-400);
+            color: var(--color-semantic-surface-on-surface-variant);
+
+            &.linkedin {
+                @media (hover: hover) {
+                    &:hover {
+                        color: var(--color-special-linkedin);
+                    }
+                }
+            }
+
+            &.github {
+                @media (hover: hover) {
+                    &:hover {
+                        color: var(--color-special-github-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-navigation {
         padding: var(--space-150) var(--space-300) var(--space-800);
         background-color: var(--color-semantic-surface-background);
         display: flex;

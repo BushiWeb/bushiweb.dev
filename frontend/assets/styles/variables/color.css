@@ -286,4 +286,9 @@
     --color-semantic-outline-outline-variation: var(
         --color-ref-neutral-variation-50
     );
+
+    /* Special colors */
+    --color-special-linkedin: #0a66c2;
+    --color-special-github: #171515;
+    --color-special-github-white: #fff;
 }
