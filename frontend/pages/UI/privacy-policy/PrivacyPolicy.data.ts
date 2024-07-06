@@ -1,4 +1,5 @@
-import WEBSITE_DATA, {
+import {
+    WEBSITE_DATA,
     WebsiteInformations,
 } from 'shared/config/website-information';
 
@@ -25,7 +26,7 @@ interface PrivacyPolicyData extends WebsiteInformations {
     data: Data[];
 }
 
-const PRIVACY_POLICY_DATA: PrivacyPolicyData = {
+export const PRIVACY_POLICY_DATA: PrivacyPolicyData = {
     lastUpdated: '01/07/2024',
     data: [
         {
@@ -68,5 +69,3 @@ const PRIVACY_POLICY_DATA: PrivacyPolicyData = {
     ],
     ...WEBSITE_DATA,
 };
-
-export default PRIVACY_POLICY_DATA;

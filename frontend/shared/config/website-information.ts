@@ -29,7 +29,7 @@ export interface WebsiteInformations {
     host: Host;
 }
 
-const WEBSITE_DATA: WebsiteInformations = {
+export const WEBSITE_DATA: WebsiteInformations = {
     url: 'https://bushiweb.dev',
 
     owner: {
@@ -57,5 +57,3 @@ const WEBSITE_DATA: WebsiteInformations = {
         email: 'ionos@ionos.fr',
     },
 };
-
-export default WEBSITE_DATA;

@@ -1,7 +1,7 @@
 import { OptionalCookie } from '../CookiePolicy.data';
 
 /* Table showing informations on optional cookies */
-export default function OptionalCookies({
+export function OptionalCookies({
     cookies,
 }: {
     cookies: OptionalCookie['cookies'];

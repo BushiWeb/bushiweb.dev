@@ -1,8 +1,11 @@
-import { Paragraph, Heading, List as L, Link } from 'shared/components/edition';
-import data from '../PrivacyPolicy.data';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import { PRIVACY_POLICY_DATA } from '../PrivacyPolicy.data';
+import * as L from 'shared/components/edition/List/List';
 
 /* User's rights section of the privacy policy */
-export default function UserRights() {
+export function UserRights() {
     return (
         <>
             <Heading level={2}>Vos droits en tant qu&apos;utilisateur</Heading>
@@ -40,15 +43,15 @@ export default function UserRights() {
                 </L.ListItem>
                 <L.ListItem>
                     email à{' '}
-                    <Link href={`mailto:${data.owner.email}`}>
-                        {data.owner.email}
+                    <Link href={`mailto:${PRIVACY_POLICY_DATA.owner.email}`}>
+                        {PRIVACY_POLICY_DATA.owner.email}
                     </Link>
                     ;
                 </L.ListItem>
                 <L.ListItem>
                     téléphone ou SMS au{' '}
-                    <Link href={`tel:${data.owner.phone}`}>
-                        {data.owner.phone}
+                    <Link href={`tel:${PRIVACY_POLICY_DATA.owner.phone}`}>
+                        {PRIVACY_POLICY_DATA.owner.phone}
                     </Link>
                     .
                 </L.ListItem>

@@ -1,11 +1,9 @@
-import { DescriptionListTerm as DescriptionListTermProps } from './DescriptionList.props';
 import './DescriptionList.css';
+import { DescriptionListTerm as DescriptionListTermProps } from './DescriptionList.props';
 
 /**
  * Term from the description list item
  */
-export default function DescriptionListTerm({
-    children,
-}: DescriptionListTermProps) {
+export function DescriptionListTerm({ children }: DescriptionListTermProps) {
     return <dt className="description-list-term">{children}</dt>;
 }

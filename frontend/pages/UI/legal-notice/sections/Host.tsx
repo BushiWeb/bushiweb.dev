@@ -1,30 +1,30 @@
-import {
-    DescriptionList as DL,
-    Heading,
-    Link,
-} from 'shared/components/edition';
-import data from '../LegalNotice.data';
+import * as DL from 'shared/components/edition/DescriptionList/DescriptionList';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { LEGAL_NOTICE_DATA } from '../LegalNotice.data';
 
 /* Host sub-section of the legal notice */
-export default function Host() {
+export function Host() {
     return (
         <>
             <Heading level={3}>Hébergeur</Heading>
             <DL.DescriptionList>
                 <DL.DescriptionListItem
                     terms="Raison sociale"
-                    descriptions={data.host.companyName}
+                    descriptions={LEGAL_NOTICE_DATA.host.companyName}
                 />
                 <DL.DescriptionListItem
                     terms="Adresse"
-                    descriptions={data.host.address}
+                    descriptions={LEGAL_NOTICE_DATA.host.address}
                 />
                 <DL.DescriptionListItem
                     terms="Email"
                     descriptions={
                         <address>
-                            <Link href={`mailto:${data.host.email}`}>
-                                {data.host.email}
+                            <Link
+                                href={`mailto:${LEGAL_NOTICE_DATA.host.email}`}
+                            >
+                                {LEGAL_NOTICE_DATA.host.email}
                             </Link>
                         </address>
                     }
@@ -33,8 +33,8 @@ export default function Host() {
                     terms="Téléphone"
                     descriptions={
                         <address>
-                            <Link href={`tel:${data.host.phone}`}>
-                                {data.host.phone}
+                            <Link href={`tel:${LEGAL_NOTICE_DATA.host.phone}`}>
+                                {LEGAL_NOTICE_DATA.host.phone}
                             </Link>
                         </address>
                     }

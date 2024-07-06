@@ -1,10 +1,10 @@
-import Logo from 'shared/components/Logo';
+import { Logo } from 'shared/components/Logo/Logo';
 import './Header.css';
 import { Link } from '@tanstack/react-router';
-import Navigation from 'widgets/Navigation';
+import { Navigation } from 'widgets/Navigation/Navigation';
 
 /* Global UI header */
-export default function Header() {
+export function Header() {
     return (
         <header className="header">
             <Link to="/">

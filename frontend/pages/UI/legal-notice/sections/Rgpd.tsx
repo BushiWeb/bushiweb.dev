@@ -1,7 +1,9 @@
-import { Paragraph, Heading, Link } from 'shared/components/edition';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* RGPD section of the legal notice */
-export default function Rgpd() {
+export function Rgpd() {
     return (
         <>
             <Heading level={2}>CNIL et gestion des données</Heading>

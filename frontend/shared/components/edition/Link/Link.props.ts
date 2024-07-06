@@ -1,4 +1,4 @@
-export default interface Link {
+export interface Link {
     href?: string;
     to?: string;
     children: React.ReactNode;

@@ -1,7 +1,8 @@
-import { Paragraph, Heading } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Update section of the privacy policy */
-export default function Updates() {
+export function Updates() {
     return (
         <>
             <Heading level={2}>Modifications</Heading>

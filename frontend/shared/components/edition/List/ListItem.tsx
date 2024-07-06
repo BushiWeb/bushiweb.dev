@@ -1,10 +1,10 @@
-import { ListItem as ListItemProps } from './List.props';
 import './List.css';
+import { ListItem as ListItemProps } from './List.props';
 
 /**
  * Item from lists
  */
-export default function ListItem({ children }: ListItemProps) {
+export function ListItem({ children }: ListItemProps) {
     return (
         <li className="edition-list-item pattern-typography-body-m">
             {children}

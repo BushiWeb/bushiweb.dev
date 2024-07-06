@@ -1,25 +1,28 @@
-import { Paragraph, Heading, Link } from 'shared/components/edition';
-import data from '../LegalNotice.data';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import { LEGAL_NOTICE_DATA } from '../LegalNotice.data';
 
 /* Copyright section of the legal notice */
-export default function Copyright() {
+export function Copyright() {
     return (
         <>
             <Heading level={2}>
                 Propriété intellectuelle et contrefaçons
             </Heading>
             <Paragraph>
-                <strong>{data.owner.fullName}</strong> est propriétaire des
-                droits de propriété intellectuelle et détient les droits
-                d&apos;usage de tous les éléments accessibles sur le site
-                internet, notamment les textes, images, graphismes, logos,
+                <strong>{LEGAL_NOTICE_DATA.owner.fullName}</strong> est
+                propriétaire des droits de propriété intellectuelle et détient
+                les droits d&apos;usage de tous les éléments accessibles sur le
+                site internet, notamment les textes, images, graphismes, logos,
                 vidéos, architecture, icônes et sons.
             </Paragraph>
             <Paragraph>
                 Toute reproduction, représentation, modification, publication,
                 adaption de tout ou partie des éléments du site, quel que soit
                 le moyen ou le procédé utilisé, est interdite, sauf autorisation
-                préalable écrite de <strong>{data.owner.fullName}</strong>
+                préalable écrite de{' '}
+                <strong>{LEGAL_NOTICE_DATA.owner.fullName}</strong>
             </Paragraph>
             <Paragraph>
                 Toute exploitation non autorisée du site ou de l&apos;un des

@@ -1,24 +1,25 @@
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 import './PrivacyPolicy.css';
-import data from './PrivacyPolicy.data';
-import { Paragraph, Heading } from 'shared/components/edition';
-import {
-    Goals,
-    UserRights,
-    Consent,
-    Juveniles,
-    Laws,
-    Updates,
-    Contact,
-    CollectedData,
-} from './sections';
+import { PRIVACY_POLICY_DATA } from './PrivacyPolicy.data';
+import { CollectedData } from './sections/CollectedData';
+import { Consent } from './sections/Consent';
+import { Contact } from './sections/Contact';
+import { Goals } from './sections/Goals';
+import { Juveniles } from './sections/Juveniles';
+import { Laws } from './sections/Laws';
+import { Updates } from './sections/Updates';
+import { UserRights } from './sections/UserRights';
 
 /* Privacy policy page component */
-export default function PrivacyPolicy() {
+export function PrivacyPolicy() {
     return (
         <div className="privacy-policy">
             <Heading>Politique de confidentialité</Heading>
             <Paragraph>
-                <em>Dernière mise à jour le {data.lastUpdated}</em>
+                <em>
+                    Dernière mise à jour le {PRIVACY_POLICY_DATA.lastUpdated}
+                </em>
             </Paragraph>
 
             <Goals />

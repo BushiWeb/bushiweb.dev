@@ -1,10 +1,10 @@
-import Header from 'widgets/Header';
 import './UI.css';
-import Footer from 'widgets/Footer';
+import { Header } from 'widgets/Header/Header';
+import { Footer } from 'widgets/Footer/Footer';
 import { Outlet } from '@tanstack/react-router';
 
 /* Global UI for the pages */
-export default function UI() {
+export function UI() {
     return (
         <div className="ui">
             <Header />

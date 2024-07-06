@@ -1,7 +1,7 @@
 import { render } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import Paragraph from './Paragraph';
-import TYPO_CLASSNAMES from './Paragraph.const';
+import { Paragraph } from './Paragraph';
+import { TYPO_CLASSNAMES } from './Paragraph.const';
 
 test('The paragraph renders with the right content and classname', () => {
     const content =

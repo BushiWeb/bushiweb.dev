@@ -1,7 +1,8 @@
-import { Paragraph, Heading } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Introduction of the cookie policy */
-export default function Introduction() {
+export function Introduction() {
     return (
         <>
             <Heading level={2}>A propos des cookies</Heading>

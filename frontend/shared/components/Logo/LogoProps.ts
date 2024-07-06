@@ -1,4 +1,4 @@
-export default interface LogoProps {
+export interface LogoProps {
     alt?: string;
     width?: number;
     height?: number;

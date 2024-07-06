@@ -1,8 +1,8 @@
-import { Link } from 'shared/components/edition';
+import { Link } from 'shared/components/edition/Link/Link';
 import { ThirdPartyCookie } from '../CookiePolicy.data';
 
 /* Table showing informations on third party cookies */
-export default function ThirdPartyCookies({
+export function ThirdPartyCookies({
     cookies,
 }: {
     cookies: ThirdPartyCookie['cookies'];

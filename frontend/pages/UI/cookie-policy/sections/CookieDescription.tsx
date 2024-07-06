@@ -1,11 +1,12 @@
-import { Heading, Paragraph } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 import { Cookies } from '../CookiePolicy.data';
-import NecessaryCookies from './NecessaryCookies';
-import ThirdPartyCookies from './ThirdPartyCookie';
-import OptionalCookies from './OptionalCookies';
+import { NecessaryCookies } from './NecessaryCookies';
+import { OptionalCookies } from './OptionalCookies';
+import { ThirdPartyCookies } from './ThirdPartyCookie';
 
 /* Description of all cookies saved on this website */
-export default function CookieDescription({
+export function CookieDescription({
     title,
     necessary,
     thirdParty,

@@ -1,6 +1,6 @@
 import { render } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import Footer from './Footer';
+import { Footer } from './Footer';
 
 test('The Footer component renders with the logo and the links', () => {
     const logoName = 'BushiWeb';

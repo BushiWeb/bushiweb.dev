@@ -1,4 +1,5 @@
-import WEBSITE_DATA, {
+import {
+    WEBSITE_DATA,
     WebsiteInformations,
 } from 'shared/config/website-information';
 
@@ -45,7 +46,7 @@ interface CookiePolicyData extends WebsiteInformations {
     cookies: Cookies[];
 }
 
-const COOKIE_POLICY_DATA: CookiePolicyData = {
+export const COOKIE_POLICY_DATA: CookiePolicyData = {
     lastUpdated: '04/07/2024',
     cookies: [
         /*  {
@@ -99,5 +100,3 @@ const COOKIE_POLICY_DATA: CookiePolicyData = {
     ],
     ...WEBSITE_DATA,
 };
-
-export default COOKIE_POLICY_DATA;

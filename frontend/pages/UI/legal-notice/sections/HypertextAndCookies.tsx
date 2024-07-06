@@ -1,7 +1,9 @@
-import { Paragraph, Heading, Link } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Hypertext and cookies section of the legal notice */
-export default function HypertextAndCookies() {
+export function HypertextAndCookies() {
     return (
         <>
             <Heading level={2}>Liens hypertextes et cookies</Heading>

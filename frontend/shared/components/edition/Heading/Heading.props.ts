@@ -1,4 +1,3 @@
-export default interface Heading
-    extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface Heading extends React.HTMLAttributes<HTMLHeadingElement> {
     level?: 1 | 2 | 3;
 }

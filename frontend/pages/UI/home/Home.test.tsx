@@ -1,6 +1,6 @@
 import { render } from 'shared/tests/tests-utils';
 import { test } from 'vitest';
-import Home from './Home';
+import { Home } from './Home';
 
 test('The Home component renders', () => {
     const { getByRole } = render(<Home />);

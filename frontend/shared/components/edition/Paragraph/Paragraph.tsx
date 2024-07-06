@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import TYPO_CLASSNAMES from './Paragraph.const';
+import { TYPO_CLASSNAMES } from './Paragraph.const';
 import './Paragraph.css';
 
 /**
  * Paragraph component, inserts a classic paraphraph with the right class name.
  */
-export default function Paragraph({
+export function Paragraph({
     children,
 }: React.HTMLAttributes<HTMLParagraphElement>) {
     return (

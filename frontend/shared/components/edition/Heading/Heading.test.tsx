@@ -1,7 +1,7 @@
 import { render } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import Heading from './Heading';
-import TYPO_CLASSNAMES from './Heading.const';
+import { Heading } from './Heading';
+import { TYPO_CLASSNAMES } from './Heading.const';
 
 test('The heading renders with the default level 1', () => {
     const title = 'test';

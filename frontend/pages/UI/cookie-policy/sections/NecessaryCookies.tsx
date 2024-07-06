@@ -1,7 +1,7 @@
 import { NecessaryCookie } from '../CookiePolicy.data';
 
 /* Table showing informations on necessary cookies */
-export default function NecessaryCookies({
+export function NecessaryCookies({
     cookies,
 }: {
     cookies: NecessaryCookie['cookies'];

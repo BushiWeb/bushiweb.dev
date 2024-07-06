@@ -1,7 +1,8 @@
-import { Paragraph, Heading } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Juveniles section of the privacy policy */
-export default function Juveniles() {
+export function Juveniles() {
     return (
         <>
             <Heading level={2}>Mineurs</Heading>

@@ -1,7 +1,8 @@
-import { Paragraph, Heading } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Jurisdiction section of the legal notice */
-export default function Jurisdiction() {
+export function Jurisdiction() {
     return (
         <>
             <Heading level={2}>

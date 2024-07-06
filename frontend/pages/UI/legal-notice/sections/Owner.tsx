@@ -1,30 +1,30 @@
-import {
-    DescriptionList as DL,
-    Heading,
-    Link,
-} from 'shared/components/edition';
-import data from '../LegalNotice.data';
+import { Link } from 'shared/components/edition/Link/Link';
+import * as DL from 'shared/components/edition/DescriptionList/DescriptionList';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { LEGAL_NOTICE_DATA } from '../LegalNotice.data';
 
 /* Owner sub-section of the legal notice */
-export default function Owner() {
+export function Owner() {
     return (
         <>
             <Heading level={3}>Propriétaire du site</Heading>
             <DL.DescriptionList>
                 <DL.DescriptionListItem
                     terms="Identité"
-                    descriptions={data.owner.fullName}
+                    descriptions={LEGAL_NOTICE_DATA.owner.fullName}
                 />
                 <DL.DescriptionListItem
                     terms="Adresse"
-                    descriptions={data.owner.address}
+                    descriptions={LEGAL_NOTICE_DATA.owner.address}
                 />
                 <DL.DescriptionListItem
                     terms="Email"
                     descriptions={
                         <address>
-                            <Link href={`mailto:${data.owner.email}`}>
-                                {data.owner.email}
+                            <Link
+                                href={`mailto:${LEGAL_NOTICE_DATA.owner.email}`}
+                            >
+                                {LEGAL_NOTICE_DATA.owner.email}
                             </Link>
                         </address>
                     }
@@ -33,8 +33,8 @@ export default function Owner() {
                     terms="Téléphone"
                     descriptions={
                         <address>
-                            <Link href={`tel:${data.owner.phone}`}>
-                                {data.owner.phone}
+                            <Link href={`tel:${LEGAL_NOTICE_DATA.owner.phone}`}>
+                                {LEGAL_NOTICE_DATA.owner.phone}
                             </Link>
                         </address>
                     }

@@ -1,7 +1,9 @@
-import { Paragraph, Heading, List as L } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import * as L from 'shared/components/edition/List/List';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Applicable laws section of the privacy policy */
-export default function Laws() {
+export function Laws() {
     return (
         <>
             <Heading level={2}>Lois applicables</Heading>

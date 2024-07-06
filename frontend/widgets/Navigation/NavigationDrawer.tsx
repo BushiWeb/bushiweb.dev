@@ -1,18 +1,18 @@
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Navigation.css';
 import { Link } from '@tanstack/react-router';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { NavigationDrawer as NavigationDrawerProps } from './Navigation.props';
 import FocusTrap from 'focus-trap-react';
 import { useContext, useEffect } from 'react';
-import NavigationContext from './Navigation.context';
+import { NavigationContext } from './Navigation.context';
+import './Navigation.css';
+import { NavigationDrawer as NavigationDrawerProps } from './Navigation.props';
 
 /**
  *  Drawer version of the navigation.
  * Traps the focus.
  * Closed on escape, click on the backdrop or click on a link.
  */
-export default function NavigationDrawer({
+export function NavigationDrawer({
     isOpen = false,
     setIsOpen,
 }: NavigationDrawerProps) {

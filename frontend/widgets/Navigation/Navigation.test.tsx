@@ -1,8 +1,8 @@
-import { render } from 'shared/tests/tests-utils';
-import { expect, test, vi } from 'vitest';
-import Navigation from './Navigation';
-import userEvent from 'shared/tests/user-event';
 import { changeViewportWidth } from 'shared/tests/changeViewportWidth';
+import { render } from 'shared/tests/tests-utils';
+import { userEvent } from 'shared/tests/user-event';
+import { expect, test, vi } from 'vitest';
+import { Navigation } from './Navigation';
 import { navigationLinks } from './Navigation.context';
 
 vi.mock('focus-trap-react', () => ({

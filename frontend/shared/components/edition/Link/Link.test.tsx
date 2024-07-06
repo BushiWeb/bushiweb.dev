@@ -1,6 +1,6 @@
 import { render } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import Link from './Link';
+import { Link } from './Link';
 
 test('The link renders with the default empty href', () => {
     const text = 'test';

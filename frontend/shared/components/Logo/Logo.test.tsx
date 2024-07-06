@@ -1,6 +1,6 @@
 import { render } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import Logo from './Logo';
+import { Logo } from './Logo';
 import { DEFAULT_ALT, LOGO_HEIGHT, LOGO_WIDTH } from './Logo.const';
 
 test('The logo renders with its default dimensions and alternate text', () => {

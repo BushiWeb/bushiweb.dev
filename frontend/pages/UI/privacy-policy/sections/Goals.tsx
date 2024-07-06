@@ -1,7 +1,9 @@
-import { Paragraph, Heading, List as L } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import * as L from 'shared/components/edition/List/List';
 
 /* Goal section of the privacy policy */
-export default function Goals() {
+export function Goals() {
     return (
         <>
             <Heading level={2}>

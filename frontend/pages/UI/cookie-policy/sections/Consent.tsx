@@ -1,7 +1,9 @@
-import { Paragraph, Heading, Link } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Consent section of the cookie policy */
-export default function Consent() {
+export function Consent() {
     return (
         <>
             <Heading level={2}>

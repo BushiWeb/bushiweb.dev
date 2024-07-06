@@ -1,22 +1,22 @@
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 import './LegalNotice.css';
-import data from './LegalNotice.data';
-import { Paragraph, Link, Heading } from 'shared/components/edition';
-import {
-    Copyright,
-    Edition,
-    HypertextAndCookies,
-    Jurisdiction,
-    Responsabilities,
-    Rgpd,
-} from './sections';
+import { LEGAL_NOTICE_DATA } from './LegalNotice.data';
+import { Copyright } from './sections/Copyright';
+import { Edition } from './sections/Edition';
+import { HypertextAndCookies } from './sections/HypertextAndCookies';
+import { Jurisdiction } from './sections/Jurisdiction';
+import { Responsabilities } from './sections/Responsabilities';
+import { Rgpd } from './sections/Rgpd';
 
 /* Legal notice page page */
-export default function LegalNotice() {
+export function LegalNotice() {
     return (
         <div className="legal-notice">
             <Heading>Mentions légales</Heading>
             <Paragraph>
-                <em>Dernière mise à jour le {data.lastUpdated}</em>
+                <em>Dernière mise à jour le {LEGAL_NOTICE_DATA.lastUpdated}</em>
             </Paragraph>
             <Paragraph>
                 Merci au générateur{' '}

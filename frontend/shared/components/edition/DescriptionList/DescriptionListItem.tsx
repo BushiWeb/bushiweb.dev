@@ -1,12 +1,12 @@
-import { DescriptionListItem as DescriptionListItemProps } from './DescriptionList.props';
 import './DescriptionList.css';
-import DescriptionListTerm from './DescriptionListTerm';
-import DescriptionListDescription from './DescriptionListDescription';
+import { DescriptionListItem as DescriptionListItemProps } from './DescriptionList.props';
+import { DescriptionListDescription } from './DescriptionListDescription';
+import { DescriptionListTerm } from './DescriptionListTerm';
 
 /**
  * Item from description lists, with terms and description.
  */
-export default function DescriptionListItem({
+export function DescriptionListItem({
     terms,
     descriptions,
 }: DescriptionListItemProps) {

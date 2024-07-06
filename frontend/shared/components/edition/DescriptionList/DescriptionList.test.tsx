@@ -1,7 +1,7 @@
 import { render, getByText, getByTestId } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import DescriptionList from './DescriptionList';
-import DescriptionListItem from './DescriptionListItem';
+import { DescriptionList } from './DescriptionList';
+import { DescriptionListItem } from './DescriptionListItem';
 
 test('The description list renders one item', () => {
     const data = {

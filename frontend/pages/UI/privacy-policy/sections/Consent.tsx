@@ -1,7 +1,8 @@
-import { Paragraph, Heading } from 'shared/components/edition';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
 
 /* Consent section of the privacy policy */
-export default function Consent() {
+export function Consent() {
     return (
         <>
             <Heading level={2}>Consentement</Heading>

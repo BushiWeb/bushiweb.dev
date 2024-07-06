@@ -1,14 +1,12 @@
-import data from '../PrivacyPolicy.data';
-import {
-    Paragraph,
-    Heading,
-    DescriptionList as DL,
-    List as L,
-} from 'shared/components/edition';
 import React from 'react';
+import * as DL from 'shared/components/edition/DescriptionList/DescriptionList';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import * as L from 'shared/components/edition/List/List';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import { PRIVACY_POLICY_DATA } from '../PrivacyPolicy.data';
 
 /* Collected data section of the privacy policy */
-export default function CollectedData() {
+export function CollectedData() {
     return (
         <>
             <Heading level={2}>
@@ -45,7 +43,7 @@ export default function CollectedData() {
                 raisonnablement pratique.
             </Paragraph>
 
-            {data.data.map((value, index) => (
+            {PRIVACY_POLICY_DATA.data.map((value, index) => (
                 <React.Fragment key={`${index}-${value.title}`}>
                     <Heading level={3}>{value.title}</Heading>
                     {value.introduction && (

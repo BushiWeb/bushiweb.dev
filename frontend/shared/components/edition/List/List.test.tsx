@@ -1,7 +1,7 @@
 import { render, getByRole as genGetByRole } from 'shared/tests/tests-utils';
 import { expect, test } from 'vitest';
-import List from './List';
-import ListItem from './ListItem';
+import { List } from './List';
+import { ListItem } from './ListItem';
 
 test('The description list renders an unordered list', () => {
     const items = ['item1', 'item2'];

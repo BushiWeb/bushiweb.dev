@@ -1,7 +1,7 @@
 import userEventTL, { Options } from '@testing-library/user-event';
 import { act } from '@testing-library/react';
 
-const userEvent = {
+export const userEvent = {
     setup: (options?: Options) => {
         const user = userEventTL.setup(options);
 
@@ -64,5 +64,3 @@ const userEvent = {
         };
     },
 };
-
-export default userEvent;

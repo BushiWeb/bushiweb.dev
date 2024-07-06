@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TanStackRouterDevtools =
+export const TanStackRouterDevtools =
     process.env.NODE_ENV === 'production' ?
         () => null // Render nothing in production
     :   React.lazy(() =>
@@ -11,5 +11,3 @@ const TanStackRouterDevtools =
                 // default: res.TanStackRouterDevtoolsPanel
             })),
         );
-
-export default TanStackRouterDevtools;

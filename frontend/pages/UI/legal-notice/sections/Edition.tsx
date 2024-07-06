@@ -1,11 +1,13 @@
-import { Paragraph, Heading, Link } from 'shared/components/edition';
-import Owner from './Owner';
-import Company from './Company';
-import Host from './Host';
-import data from '../LegalNotice.data';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import { LEGAL_NOTICE_DATA } from '../LegalNotice.data';
+import { Company } from './Company';
+import { Host } from './Host';
+import { Owner } from './Owner';
 
 /* Edition section of the legal notice */
-export default function Edition() {
+export function Edition() {
     return (
         <>
             <Heading level={2}>Édition du site</Heading>
@@ -16,9 +18,11 @@ export default function Edition() {
                 </Link>{' '}
                 pour la confiance dans l&apos;économie numérique, il est précisé
                 aux utilisateurs du site internet{' '}
-                <Link href={data.url}>{data.url}</Link> l&apos;identité des
-                différents intervenants dans le cadre de sa réalisation et de
-                son suivi.
+                <Link href={LEGAL_NOTICE_DATA.url}>
+                    {LEGAL_NOTICE_DATA.url}
+                </Link>{' '}
+                l&apos;identité des différents intervenants dans le cadre de sa
+                réalisation et de son suivi.
             </Paragraph>
             <Owner />
             <Company />

@@ -1,8 +1,11 @@
-import { Paragraph, Heading, List as L, Link } from 'shared/components/edition';
-import data from '../CookiePolicy.data';
+import { Heading } from 'shared/components/edition/Heading/Heading';
+import { Link } from 'shared/components/edition/Link/Link';
+import * as L from 'shared/components/edition/List/List';
+import { Paragraph } from 'shared/components/edition/Paragraph/Paragraph';
+import { COOKIE_POLICY_DATA } from '../CookiePolicy.data';
 
 /* Contact section of the cookie policy */
-export default function Contact() {
+export function Contact() {
     return (
         <>
             <Heading level={2}>Contact</Heading>
@@ -14,15 +17,15 @@ export default function Contact() {
                 <L.List>
                     <L.ListItem>
                         email:{' '}
-                        <Link href={`mailto:${data.owner.email}`}>
-                            {data.owner.email}
+                        <Link href={`mailto:${COOKIE_POLICY_DATA.owner.email}`}>
+                            {COOKIE_POLICY_DATA.owner.email}
                         </Link>
                         ;
                     </L.ListItem>
                     <L.ListItem>
                         téléphone:{' '}
-                        <Link href={`tel:${data.owner.phone}`}>
-                            {data.owner.phone}
+                        <Link href={`tel:${COOKIE_POLICY_DATA.owner.phone}`}>
+                            {COOKIE_POLICY_DATA.owner.phone}
                         </Link>
                         .
                     </L.ListItem>

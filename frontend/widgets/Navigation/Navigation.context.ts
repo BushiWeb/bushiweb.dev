@@ -15,7 +15,6 @@ export const navigationLinks = [
         to: '/politique-de-cookies',
     },
 ];
-const NavigationContext =
-    createContext<typeof navigationLinks>(navigationLinks);
 
-export default NavigationContext;
+export const NavigationContext =
+    createContext<typeof navigationLinks>(navigationLinks);

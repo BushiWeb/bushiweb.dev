@@ -1,5 +1,5 @@
 /* Background graphics for the home page */
-export default function Background() {
+export function Background() {
     return (
         <>
             <svg

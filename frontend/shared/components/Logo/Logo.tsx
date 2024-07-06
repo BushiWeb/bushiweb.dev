@@ -1,9 +1,9 @@
 import logo from 'assets/images/logo/logo_text_dark.svg';
-import LogoProps from './LogoProps';
 import { DEFAULT_ALT, LOGO_ASPECT_RATIO, LOGO_HEIGHT } from './Logo.const';
+import { LogoProps } from './LogoProps';
 
 /** BushiWeb logo */
-export default function Logo({
+export function Logo({
     alt = DEFAULT_ALT,
     width,
     height,

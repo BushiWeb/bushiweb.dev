@@ -1,7 +1,7 @@
 import { render } from 'shared/tests/tests-utils';
 import { test } from 'vitest';
-import PrivacyPolicy from './PrivacyPolicy';
+import { PrivacyPolicy } from './PrivacyPolicy';
 
-test('The Legal notice component renders', () => {
+test('The PrivacyPolocy component renders', () => {
     render(<PrivacyPolicy />);
 });

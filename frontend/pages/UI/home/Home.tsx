@@ -1,8 +1,8 @@
-import Background from './Background';
+import { Background } from './Background';
 import './Home.css';
 
 /* Home page */
-export default function Home() {
+export function Home() {
     return (
         <div className="home">
             <div className="content">

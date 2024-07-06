@@ -1,11 +1,11 @@
-import Logo from 'shared/components/Logo';
-import './Footer.css';
-import { Link } from '@tanstack/react-router';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from '@tanstack/react-router';
+import { Logo } from 'shared/components/Logo/Logo';
+import './Footer.css';
 
 /* Global UI Footer */
-export default function Footer() {
+export function Footer() {
     return (
         <footer className="footer">
             <div className="footer-content">
