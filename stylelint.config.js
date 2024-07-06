@@ -34,5 +34,9 @@ export default {
             { severity: 'warning', ignore: ['1px', '2px'], fontSize: 16 },
         ],
         'csstools/use-nesting': 'always',
+        'selector-class-pattern': [
+            /[a-zA-Z][a-zA-Z0-9-]*(?:__[a-zA-Z0-9-]+)*(?:--[a-zA-Z0-9-]+)*/,
+            { message: 'Expect class selector tu use a BEM compatible syntax' },
+        ],
     },
 };

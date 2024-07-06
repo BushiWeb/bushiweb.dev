@@ -1,0 +1,89 @@
+.navigation-drawer-trap {
+    .navigation-drawer-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: var(--layer-backdrop);
+        background-color: var(--color-semantic-backdrop);
+        backdrop-filter: blur(2px);
+    }
+
+    .navigation-drawer {
+        --border-radius: var(--border-radius-500);
+
+        position: fixed;
+        inset-inline: 0;
+        inset-block-end: 0;
+        z-index: var(--layer-highest);
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: var(--space-500);
+        background-color: var(--color-semantic-surface-layer4);
+        color: var(--color-semantic-surface-on-surface);
+        padding: var(--space-400) var(--space-300);
+        border-start-start-radius: var(--border-radius);
+        border-start-end-radius: var(--border-radius);
+
+        .navigation-drawer__nav ul {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: start;
+            align-items: center;
+            gap: var(--space-300);
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                &:visited {
+                    color: inherit;
+                }
+
+                &:active,
+                &.current {
+                    color: var(--color-semantic-primary-on-primary-container);
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        color: var(
+                            --color-semantic-primary-on-primary-container
+                        );
+                        text-decoration: underline 15%;
+                        text-underline-offset: var(--space-100);
+                    }
+                }
+            }
+        }
+
+        .navigation-socials {
+            padding: var(--space-150);
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: var(--space-250);
+
+            .navigation-socials-icon {
+                font-size: var(--size-400);
+                color: var(--color-semantic-surface-on-surface-variant);
+
+                &.linkedin {
+                    @media (hover: hover) {
+                        &:hover {
+                            color: var(--color-special-linkedin);
+                        }
+                    }
+                }
+
+                &.github {
+                    @media (hover: hover) {
+                        &:hover {
+                            color: var(--color-special-github-white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

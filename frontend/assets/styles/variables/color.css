@@ -287,6 +287,9 @@
         --color-ref-neutral-variation-50
     );
 
+    /* Backdrop semantic */
+    --color-semantic-backdrop: hsl(0deg 0 0 / var(--opacity-backdrop));
+
     /* Special colors */
     --color-special-linkedin: #0a66c2;
     --color-special-github: #171515;

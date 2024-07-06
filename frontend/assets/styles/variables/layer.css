@@ -2,5 +2,6 @@
     --layer-lowest: -999;
     --layer-low: -1;
     --layer-high: 2;
+    --layer-backdrop: 998;
     --layer-highest: 999;
 }

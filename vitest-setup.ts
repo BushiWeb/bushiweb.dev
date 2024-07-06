@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 import { cleanup } from '@testing-library/react';
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { afterEach, vi } from 'vitest';
 
 vi.mock('@tanstack/react-router', async (importOriginal) => {
@@ -8,8 +8,15 @@ vi.mock('@tanstack/react-router', async (importOriginal) => {
     return {
         ...mod,
         // replace some exports
-        Link: ({ to, children }: { to?: string; children: React.ReactNode }) =>
-            React.createElement('a', { href: to }, children),
+        Link: ({
+            to,
+            children,
+            onClick,
+        }: {
+            to?: string;
+            children: React.ReactNode;
+            onClick: (a: MouseEvent) => void;
+        }) => React.createElement('a', { href: to, onClick }, children),
         Outlet: () => React.createElement('div'),
     };
 });
