@@ -6,6 +6,8 @@ import { useContext, useEffect } from 'react';
 import { NavigationContext } from './Navigation.context';
 import './Navigation.css';
 import { NavigationDrawer as NavigationDrawerProps } from './Navigation.props';
+import { IconButton } from 'shared/components/IconButton/IconButton';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 /**
  *  Drawer version of the navigation.
@@ -45,7 +47,7 @@ export function NavigationDrawer({
     }
 
     /* Function to handle clicking on the backdrop or the links to close the menu */
-    function handleClick() {
+    function handleCloseClick() {
         setIsOpen(false);
     }
 
@@ -54,11 +56,17 @@ export function NavigationDrawer({
             <div className="navigation-drawer-trap">
                 <div
                     className="navigation-drawer-backdrop"
-                    onClick={handleClick}
+                    onClick={handleCloseClick}
                     data-testid="backdrop"
                 ></div>
                 <div className="navigation-drawer">
                     <nav className="navigation-drawer__nav">
+                        <IconButton
+                            icon={faXmark}
+                            title="Fermer la navigation"
+                            onClick={handleCloseClick}
+                            className="navigation-drawer__close-button"
+                        />
                         <ul>
                             {navigationLinks.map(({ label, to }) => (
                                 <li key={label}>
@@ -68,7 +76,7 @@ export function NavigationDrawer({
                                         activeProps={{
                                             className: 'current',
                                         }}
-                                        onClick={handleClick}
+                                        onClick={handleCloseClick}
                                     >
                                         {label}
                                     </Link>

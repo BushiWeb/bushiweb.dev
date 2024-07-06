@@ -1,35 +1,39 @@
-.FAB {
-    --size: var(--size-700);
-    --color: var(--color-semantic-primary-on-primary);
-    --bg-color: var(--color-semantic-primary-primary);
-    --border-radius: var(--border-radius-200);
+.IconButton {
+    --size: var(--size-600);
+    --color: var(--color-semantic-secondary-secondary);
+    --border-radius: var(--border-radius-full);
 
-    position: fixed;
-    z-index: var(--layer-high);
-    inset-inline-start: var(--space-200);
-    inset-block-end: var(--space-200);
+    position: relative;
     display: grid;
     place-items: center;
-    min-inline-size: var(--size);
+    inline-size: var(--size);
     block-size: var(--size);
-    background-color: var(--bg-color);
+    background-color: transparent;
     color: var(--color);
     border: none;
     border-radius: var(--border-radius);
-
-    &.FAB--icon {
-        font-size: var(--font-size-l2);
-    }
+    font-size: var(--font-size-l2);
 
     &::before {
         content: '';
         opacity: 0;
         background-color: var(--color);
         position: absolute;
-        inline-size: 100%;
+        inline-size: var(--size);
         block-size: var(--size);
         z-index: var(--layer-high);
         border-radius: var(--border-radius);
+    }
+
+    &::after {
+        --size: var(--size-700);
+
+        content: '';
+        background-color: transparent;
+        position: absolute;
+        inline-size: var(--size);
+        block-size: var(--size);
+        z-index: var(--layer-low);
     }
 
     @media (hover: hover) {

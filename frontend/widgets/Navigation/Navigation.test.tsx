@@ -124,3 +124,23 @@ test('Clicking a link closes the drawer', async () => {
     const navigationMenu = queryByRole('navigation');
     expect(navigationMenu).toBeNull();
 });
+
+test('Clicking the close button closes the drawer', async () => {
+    const user = mobileSetup();
+    const { getByRole, queryByRole } = render(<Navigation />);
+
+    // Click on the button
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
+    await user.click(buttonElt);
+
+    // Checks if the menu is displayed
+    getByRole('navigation');
+
+    // Close de menu
+    const closeButtonElt = getByRole('button', {
+        name: 'Fermer la navigation',
+    });
+    await user.click(closeButtonElt);
+    const navigationMenu = queryByRole('navigation');
+    expect(navigationMenu).toBeNull();
+});

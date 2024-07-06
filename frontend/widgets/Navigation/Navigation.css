@@ -25,33 +25,43 @@
         border-start-start-radius: var(--border-radius);
         border-start-end-radius: var(--border-radius);
 
-        .navigation-drawer__nav ul {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: start;
-            align-items: center;
-            gap: var(--space-300);
+        .navigation-drawer__nav {
+            .navigation-drawer__close-button {
+                position: absolute;
+                inset-inline-start: var(--space-300);
+                inset-block-start: var(--space-300);
+            }
 
-            a {
-                text-decoration: none;
-                color: inherit;
+            ul {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: start;
+                align-items: center;
+                gap: var(--space-300);
 
-                &:visited {
+                a {
+                    text-decoration: none;
                     color: inherit;
-                }
 
-                &:active,
-                &.current {
-                    color: var(--color-semantic-primary-on-primary-container);
-                }
+                    &:visited {
+                        color: inherit;
+                    }
 
-                @media (hover: hover) {
-                    &:hover {
+                    &:active,
+                    &.current {
                         color: var(
                             --color-semantic-primary-on-primary-container
                         );
-                        text-decoration: underline 15%;
-                        text-underline-offset: var(--space-100);
+                    }
+
+                    @media (hover: hover) {
+                        &:hover {
+                            color: var(
+                                --color-semantic-primary-on-primary-container
+                            );
+                            text-decoration: underline 15%;
+                            text-underline-offset: var(--space-100);
+                        }
                     }
                 }
             }
