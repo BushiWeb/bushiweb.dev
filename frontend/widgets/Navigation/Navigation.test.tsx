@@ -19,7 +19,7 @@ function mobileSetup() {
 test('The component only renders a button on mobile', () => {
     mobileSetup();
     const { getByRole, queryByRole } = render(<Navigation />);
-    getByRole('button', { name: 'Ouvrir le menu' });
+    getByRole('button', { name: 'Accéder à la navigation' });
     const navigationElt = queryByRole('navigation');
     expect(navigationElt).toBeNull();
 });
@@ -29,7 +29,7 @@ test('Clicking the button opens the navigation drawer', async () => {
     const { getByRole } = render(<Navigation />);
 
     // Click on the button
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Checks the menu
@@ -41,7 +41,7 @@ test('The menu links to the social networks', async () => {
     const { getByRole } = render(<Navigation />);
 
     // Click on the button to display the menu
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Social link tests
@@ -62,7 +62,7 @@ test('The menu links to the main pages of the website', async () => {
     const { getByRole } = render(<Navigation />);
 
     // Click on the button to display the menu
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Link tests
@@ -77,7 +77,7 @@ test('Pressing escape closes the drawer', async () => {
     const { getByRole, queryByRole } = render(<Navigation />);
 
     // Click on the button
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Checks if the menu is displayed
@@ -94,7 +94,7 @@ test('Clicking the backdrop closes the drawer', async () => {
     const { getByRole, queryByRole, getByTestId } = render(<Navigation />);
 
     // Click on the button
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Checks if the menu is displayed
@@ -112,7 +112,7 @@ test('Clicking a link closes the drawer', async () => {
     const { getByRole, getAllByRole, queryByRole } = render(<Navigation />);
 
     // Click on the button
-    const buttonElt = getByRole('button', { name: 'Ouvrir le menu' });
+    const buttonElt = getByRole('button', { name: 'Accéder à la navigation' });
     await user.click(buttonElt);
 
     // Checks if the menu is displayed
