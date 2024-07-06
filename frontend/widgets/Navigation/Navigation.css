@@ -25,11 +25,26 @@
         border-start-start-radius: var(--border-radius);
         border-start-end-radius: var(--border-radius);
 
+        @media (width > 640px) {
+            inset-block: 0;
+            inset-inline-end: unset;
+            border-start-start-radius: 0;
+            border-end-end-radius: var(--border-radius);
+            padding: var(--space-1000) var(--space-1000) var(--space-800)
+                var(--space-600);
+        }
+
         .navigation-drawer__nav {
             .navigation-drawer__close-button {
                 position: absolute;
                 inset-inline-start: var(--space-300);
                 inset-block-start: var(--space-300);
+
+                @media (width > 640px) {
+                    inset-block-start: var(--space-300);
+                    inset-inline-start: unset;
+                    inset-inline-end: var(--space-300);
+                }
             }
 
             ul {
@@ -38,6 +53,10 @@
                 justify-content: start;
                 align-items: center;
                 gap: var(--space-300);
+
+                @media (width > 640px) {
+                    align-items: start;
+                }
 
                 a {
                     text-decoration: none;
