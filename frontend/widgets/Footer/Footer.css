@@ -31,11 +31,24 @@
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        gap: var(--space-250);
+        gap: var(--space-300);
 
         a {
             font-size: var(--size-400);
             color: var(--color-semantic-surface-on-surface-variant);
+            position: relative;
+            isolation: isolate;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inline-size: var(--size-600);
+                block-size: var(--size-600);
+                z-index: var(--layer-low);
+                inset-block-start: 50%;
+                inset-inline-start: 50%;
+                translate: -50% -50%;
+            }
 
             &.linkedin {
                 @media (hover: hover) {

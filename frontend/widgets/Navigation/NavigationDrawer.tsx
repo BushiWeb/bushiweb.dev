@@ -72,7 +72,7 @@ export function NavigationDrawer({
                                 <li key={label}>
                                     <Link
                                         to={to}
-                                        className="pattern-typography-label-l"
+                                        className="pattern-typography-label-l navigation-link"
                                         activeProps={{
                                             className: 'current',
                                         }}

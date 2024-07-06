@@ -7,4 +7,10 @@
     justify-content: center;
     align-items: stretch;
     color: var(--color-semantic-primary-on-primary-container);
+
+    @media (width > 1200px) {
+        justify-content: space-between;
+        gap: var(--space-1000);
+        padding-inline: var(--space-500);
+    }
 }

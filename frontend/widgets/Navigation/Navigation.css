@@ -9,6 +9,8 @@
 
     .navigation-drawer {
         --border-radius: var(--border-radius-500);
+        --accent-color: var(--color-semantic-primary-on-primary-container);
+        --color: var(--color-semantic-surface-on-surface);
 
         position: fixed;
         inset-inline: 0;
@@ -20,7 +22,7 @@
         align-items: center;
         gap: var(--space-500);
         background-color: var(--color-semantic-surface-layer4);
-        color: var(--color-semantic-surface-on-surface);
+        color: var(--color);
         padding: var(--space-400) var(--space-300);
         border-start-start-radius: var(--border-radius);
         border-start-end-radius: var(--border-radius);
@@ -57,60 +59,91 @@
                 @media (width > 640px) {
                     align-items: start;
                 }
+            }
+        }
+    }
+}
 
-                a {
-                    text-decoration: none;
-                    color: inherit;
+.navigation-inline-container {
+    --color: var(--color-semantic-primary-on-primary-container);
+    --accent-color: var(--color-semantic-surface-on-surface);
 
-                    &:visited {
-                        color: inherit;
-                    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-600);
+    color: var(--color);
 
-                    &:active,
-                    &.current {
-                        color: var(
-                            --color-semantic-primary-on-primary-container
-                        );
-                    }
+    .navigation-inline {
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: start;
+            align-items: center;
+            gap: var(--space-300);
+        }
+    }
+}
 
-                    @media (hover: hover) {
-                        &:hover {
-                            color: var(
-                                --color-semantic-primary-on-primary-container
-                            );
-                            text-decoration: underline 15%;
-                            text-underline-offset: var(--space-100);
-                        }
-                    }
+.navigation-link {
+    text-decoration: none;
+    color: var(--color);
+
+    &:visited {
+        color: var(--color);
+    }
+
+    &:active,
+    &.current {
+        color: var(--accent-color);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--accent-color);
+            text-decoration: underline 15%;
+            text-underline-offset: var(--space-100);
+        }
+    }
+}
+
+.navigation-socials {
+    padding: var(--space-150);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: var(--space-300);
+
+    .navigation-socials-icon {
+        font-size: var(--size-400);
+        color: var(--color-semantic-surface-on-surface-variant);
+        position: relative;
+        isolation: isolate;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inline-size: var(--size-600);
+            block-size: var(--size-600);
+            z-index: var(--layer-low);
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+            translate: -50% -50%;
+        }
+
+        &.linkedin {
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--color-special-linkedin);
                 }
             }
         }
 
-        .navigation-socials {
-            padding: var(--space-150);
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            gap: var(--space-250);
-
-            .navigation-socials-icon {
-                font-size: var(--size-400);
-                color: var(--color-semantic-surface-on-surface-variant);
-
-                &.linkedin {
-                    @media (hover: hover) {
-                        &:hover {
-                            color: var(--color-special-linkedin);
-                        }
-                    }
-                }
-
-                &.github {
-                    @media (hover: hover) {
-                        &:hover {
-                            color: var(--color-special-github-white);
-                        }
-                    }
+        &.github {
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--color-special-github-white);
                 }
             }
         }

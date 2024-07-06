@@ -5,24 +5,32 @@ import './Navigation.css';
 import { NavigationDrawer } from './NavigationDrawer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavigationInline } from './NavigationInline.tsx';
+import { useBreakpoint } from 'features/breakpoint/useBreakpoints.ts';
 
 /* Page main navigation, displayed in the header on desktop and as a drawer on mobile */
 export function Navigation() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const breakpoint = useBreakpoint();
     return (
         <>
-            <FAB onClick={() => setIsDrawerOpen((value) => !value)}>
-                <FontAwesomeIcon
-                    icon={faBars}
-                    title="Accéder à la navigation"
-                />
-            </FAB>
-            <NavigationContext.Provider value={navigationLinks}>
-                <NavigationDrawer
-                    isOpen={isDrawerOpen}
-                    setIsOpen={setIsDrawerOpen}
-                />
-            </NavigationContext.Provider>
+            {breakpoint >= 3 ?
+                <NavigationInline />
+            :   <>
+                    <FAB onClick={() => setIsDrawerOpen((value) => !value)}>
+                        <FontAwesomeIcon
+                            icon={faBars}
+                            title="Accéder à la navigation"
+                        />
+                    </FAB>
+                    <NavigationContext.Provider value={navigationLinks}>
+                        <NavigationDrawer
+                            isOpen={isDrawerOpen}
+                            setIsOpen={setIsDrawerOpen}
+                        />
+                    </NavigationContext.Provider>
+                </>
+            }
         </>
     );
 }

@@ -1,5 +1,5 @@
 .IconButton {
-    --size: var(--size-600);
+    --size: var(--size-500);
     --color: var(--color-semantic-secondary-secondary);
     --border-radius: var(--border-radius-full);
 
@@ -26,7 +26,7 @@
     }
 
     &::after {
-        --size: var(--size-700);
+        --size: var(--size-600);
 
         content: '';
         background-color: transparent;

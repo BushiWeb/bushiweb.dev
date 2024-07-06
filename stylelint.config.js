@@ -38,5 +38,6 @@ export default {
             /[a-zA-Z][a-zA-Z0-9-]*(?:__[a-zA-Z0-9-]+)*(?:--[a-zA-Z0-9-]+)*/,
             { message: 'Expect class selector tu use a BEM compatible syntax' },
         ],
+        'no-descending-specificity': null,
     },
 };
