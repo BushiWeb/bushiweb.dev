@@ -1,0 +1,16 @@
+node_modules
+.husky
+dist
+*code-workspace
+
+eslint.config.js
+.eslintcache
+.prettierrc
+.prettierignore
+stylelint.config.js
+.stylelintignore
+.stylelintcache
+.lintstagedrc
+.gitignore
+postcss.config.js
+vitest-setup.ts

@@ -1,10 +1,12 @@
 import { Background } from './Background';
+import { Building } from './Building';
 import './Home.css';
 
 /* Home page */
 export function Home() {
     return (
         <div className="home">
+            <Building />
             <div className="content">
                 <h1 className="pattern-typography-display-m">
                     Votre site internet: votre idée, mon expertise

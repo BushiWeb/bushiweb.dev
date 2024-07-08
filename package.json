@@ -1,18 +1,23 @@
 {
     "name": "bushiweb.dev",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.1.1",
     "type": "module",
     "scripts": {
         "prepare": "husky",
         "dev": "vite",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "preview": "vite preview",
         "test": "vitest",
         "check:lint": "eslint . --max-warnings 0 --cache",
         "check:format": "prettier . --write --cache",
         "check:csslint": "stylelint \"**/*.css\" --cache --fix --max-warnings 0",
-        "check:all": "npm run check:format && npm run check:lint && npm run check:csslint"
+        "check:all": "npm run check:format && npm run check:lint && npm run check:csslint",
+        "docker:build": "docker build -t bushiweb.dev .",
+        "docker:run": "docker run -it --rm -d -p 8080:80 --name bushiweb bushiweb.dev",
+        "docker:kill": "docker kill bushiweb",
+        "docker:tag": "docker tag bushiweb.dev bushiweb/bushiweb.dev:0.1.1",
+        "docker:push": "docker push bushiweb/bushiweb.dev:0.1.1"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
