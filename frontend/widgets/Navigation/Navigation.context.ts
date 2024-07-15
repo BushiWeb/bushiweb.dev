@@ -5,10 +5,6 @@ export const navigationLinks = [
         label: 'Accueil',
         to: '/',
     },
-    {
-        label: 'Me contacter',
-        to: '/contact',
-    },
     { label: 'Mentions légales', to: '/mentions-legales' },
     {
         label: 'Politique de confidentialité',
