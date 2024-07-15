@@ -16,7 +16,9 @@
         "docker:build": "docker build -t bushiweb/bushiweb.dev:0.1.3 .",
         "docker:run": "docker run -it --rm -d -p 8080:80 --name bushiweb bushiweb/bushiweb.dev:0.1.3",
         "docker:kill": "docker kill bushiweb",
-        "docker:push": "docker push bushiweb/bushiweb.dev:0.1.3"
+        "docker:push": "docker push bushiweb/bushiweb.dev:0.1.3",
+        "backend:prod": "node --env-file=.env backend/index.js",
+        "backend:dev": "node --watch --env-file=.env --env-file=.development.env backend/index.js"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -26,7 +28,11 @@
         "@fortawesome/react-fontawesome": "^0.2.2",
         "@tanstack/react-router": "^1.43.2",
         "classnames": "^2.5.1",
+        "convict": "^6.2.4",
+        "express": "^4.19.2",
         "focus-trap-react": "^10.2.3",
+        "pino": "^9.3.0",
+        "pino-http": "^10.2.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
@@ -50,6 +56,7 @@
         "husky": "^9.0.11",
         "jsdom": "^24.1.0",
         "lint-staged": "^15.2.7",
+        "pino-pretty": "^11.2.1",
         "postcss-preset-env": "^9.5.14",
         "prettier": "^3.3.2",
         "stylelint": "^16.6.1",
