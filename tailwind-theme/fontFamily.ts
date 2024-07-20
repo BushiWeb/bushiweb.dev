@@ -1,0 +1,32 @@
+export default {
+    primary: [
+        'var(--font-primary)',
+        'system-ui',
+        'sans-serif',
+        'Noto Color Emoji',
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+    ],
+    secondary: [
+        'var(--font-secondary)',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+    ],
+    mono: [
+        'var(--font-mono)',
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'Liberation Mono',
+        'Courier New',
+        'monospace',
+    ],
+    display: ['var(--font-display)', 'Cambria', 'Times New Roman', 'serif'],
+};

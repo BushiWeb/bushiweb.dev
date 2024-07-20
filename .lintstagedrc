@@ -1,11 +1,13 @@
 {
     "**/*.{js,jsx,ts,tsx}": [
-        "eslint --fix --max-warnings 0 --cache",
+        "eslint --max-warnings 0 --cache",
         "prettier --write --cache"
     ],
     "**/*.{html,json,md}": ["prettier --write --cache"],
     "**/*.css": [
         "stylelint --cache --fix --max-warnings 0",
         "prettier . --write --cache"
-    ]
+    ],
+    "**/*.{nginx,nginxconf}": ["prettier --write --cache"],
+    "**/*.prisma": ["prettier --write --cache"]
 }

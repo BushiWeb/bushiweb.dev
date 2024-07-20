@@ -1,14 +1,31 @@
 import eslint from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
-import reactJsxRuntime from 'eslint-plugin-react/configs/jsx-runtime.js';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import reactPlugin from 'eslint-plugin-react/index.js';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import nextPlugin from '@next/eslint-plugin-next';
 import tseslint from 'typescript-eslint';
+import prettierConfig from 'eslint-config-prettier';
 
 export default tseslint.config(
     {
         ignores: [
+            'node_modules',
+            '.pnp',
+            '.pnp.js',
+            '.yarn/install-state.gz',
+            'coverage',
+            '.next/',
+            'out/',
+            'build',
+            'dist',
+            'dist-ssr',
+            '.DS_Store',
+            '*.pem',
+            '.env*.local',
+            '*.local',
+            '.env*',
+            '*.tsbuildinfo',
+            'next-env.d.ts',
             'logs',
             '*.log',
             'npm-debug.log*',
@@ -16,20 +33,18 @@ export default tseslint.config(
             'yarn-error.log*',
             'pnpm-debug.log*',
             'lerna-debug.log*',
-            'node_modules/',
-            'dist',
-            'dist-ssr',
-            '*.local',
             '.vscode/*',
             '!.vscode/extensions.json',
             '.idea',
-            '.DS_Store',
             '*.suo',
             '*.ntvs*',
             '*.njsproj',
             '*.sln',
             '*.sw?',
             '*.code-workspace',
+            '.eslintcache',
+            '.prettier-cache',
+            '.stylelintcache',
         ],
     },
     eslint.configs.recommended,
@@ -38,9 +53,10 @@ export default tseslint.config(
             reportUnusedDisableDirectives: 'warn',
         },
         plugins: {
-            react,
-            'react-hooks': reactHooks,
-            reactRefresh,
+            react: reactPlugin,
+            'react-hooks': reactHooksPlugin,
+            'jsx-a11y': jsxA11yPlugin,
+            '@next/next': nextPlugin,
         },
         settings: {
             react: {
@@ -48,27 +64,27 @@ export default tseslint.config(
             },
         },
         rules: {
-            ...reactRecommended.rules,
-            ...reactJsxRuntime.rules,
-            ...reactHooks.configs.recommended.rules,
-            'reactRefresh/only-export-components': [
-                'warn',
-                { allowConstantExport: true },
-            ],
+            ...reactPlugin.configs.recommended.rules,
+            ...reactPlugin.configs['jsx-runtime'].rules,
+            ...reactHooksPlugin.configs.recommended.rules,
+            ...jsxA11yPlugin.configs.recommended.rules,
+            ...nextPlugin.configs.recommended.rules,
+            ...nextPlugin.configs['core-web-vitals'].rules,
             'no-duplicate-imports': 'error',
         },
     },
     {
-        files: ['**/*.{ts,tsx}'],
+        files: ['src/**/*.tsx', 'src/**/*.ts', '*.ts', 'tailwind-theme/*.ts'],
         extends: [
             ...tseslint.configs.recommendedTypeChecked,
             ...tseslint.configs.stylisticTypeChecked,
         ],
         languageOptions: {
             parserOptions: {
-                project: ['tsconfig.json', 'tsconfig.node.json'],
+                project: ['tsconfig.json'],
                 tsconfigRootDir: import.meta.dirname,
             },
         },
     },
+    prettierConfig,
 );

@@ -2,5 +2,20 @@
     "tabWidth": 4,
     "singleQuote": true,
     "experimentalTernaries": true,
-    "endOfLine": "crlf"
+    "endOfLine": "crlf",
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "overrides": [
+        {
+            "files": "**/*.prisma",
+            "options": {
+                "plugins": ["prettier-plugin-prisma"]
+            }
+        },
+        {
+            "files": "**/*.{nginx,nginxconf}",
+            "options": {
+                "plugins": ["prettier-plugin-nginx"]
+            }
+        }
+    ]
 }

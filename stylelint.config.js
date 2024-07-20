@@ -34,5 +34,6 @@ export default {
             { severity: 'warning', ignore: ['1px', '2px'], fontSize: 16 },
         ],
         'csstools/use-nesting': 'always',
+        'at-rule-no-unknown': [true, { ignoreAtRules: ['tailwind'] }],
     },
 };
