@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { DEFAULT_ALT, LOGO_HEIGHT, LOGO_WIDTH } from './Logo.const';
 import type { LogoProps } from './Logo.props';
+import logo from '@/public/logo/logo_text_dark.svg';
 
 /**
  * BushiWeb textual logo.
@@ -15,7 +16,8 @@ export const Logo = ({
 }: LogoProps) => {
     return (
         <Image
-            src="logo/logo_text_dark.svg"
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            src={logo}
             alt={alt}
             className={className}
             priority={priority}

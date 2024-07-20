@@ -18,8 +18,9 @@
                 "name": "next"
             }
         ],
-        "baseUrl": "./public",
+        "baseUrl": ".",
         "paths": {
+            "@/public/*": ["./public/*"],
             "@/*": ["./src/*"]
         }
     },
