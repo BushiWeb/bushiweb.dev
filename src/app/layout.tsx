@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { primary, secondary, mono, display } from './font';
 import { Header } from '@/widgets/Header/Header';
+import { Footer } from '@/widgets/Footer/Footer';
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -21,6 +22,7 @@ export default function RootLayout({
             <body className="font-primary">
                 <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );
