@@ -21,4 +21,7 @@ export default {
     1600: `${baseSpacing * 16}rem`,
     2000: `${baseSpacing * 20}rem`,
     2400: `${baseSpacing * 24}rem`,
+    'content-s': '45ch',
+    'content-m': '60ch',
+    'content-l': '80ch',
 };

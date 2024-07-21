@@ -12,4 +12,4 @@ const customRender = (ui: React.ReactNode, options: RenderOptions = {}) => {
 };
 
 export * from '@testing-library/react';
-export { customRender as render };
+export { customRender as render, render as tlRender };

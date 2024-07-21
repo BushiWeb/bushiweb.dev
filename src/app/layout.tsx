@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { primary, secondary, mono, display } from './font';
+import { primary, secondary, mono, display } from './_ui/font';
 import { Header } from '@/widgets/Header/Header';
 import { Footer } from '@/widgets/Footer/Footer';
 
@@ -17,9 +17,9 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={`${primary.variable} ${secondary.variable} ${mono.variable} ${display.variable}`}
+            className={`${primary.variable} ${secondary.variable} ${mono.variable} ${display.variable} h-full`}
         >
-            <body className="font-primary">
+            <body className="flex min-h-full flex-col flex-nowrap items-stretch justify-start font-primary">
                 <Header />
                 {children}
                 <Footer />

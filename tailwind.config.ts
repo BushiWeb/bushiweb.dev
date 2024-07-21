@@ -9,7 +9,7 @@ import screens from './tailwind-theme/screens';
 import borderRadius from './tailwind-theme/borderRadius';
 import borderWidth from './tailwind-theme/borderWidth';
 import fontSize from './tailwind-theme/fontSize';
-import zIndex from './tailwind-theme/zIndex';
+import zIndex from './tailwind-theme/z-index';
 import fontFamily from './tailwind-theme/fontFamily';
 
 const config: Config = {
