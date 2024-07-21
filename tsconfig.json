@@ -20,7 +20,8 @@
         ],
         "baseUrl": ".",
         "paths": {
-            "@/public/*": ["./public/*"],
+            "@public/*": ["./public/*"],
+            "@tests/*": ["./src/shared/tests/*"],
             "@/*": ["./src/*"]
         }
     },

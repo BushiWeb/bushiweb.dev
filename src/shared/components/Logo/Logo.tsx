@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { DEFAULT_ALT, LOGO_HEIGHT, LOGO_WIDTH } from './Logo.const';
 import type { LogoProps } from './Logo.props';
-import logo from '@/public/logo/logo_text_dark.svg';
+import logo from '@public/logo/logo_text_dark.svg';
 
 /**
  * BushiWeb textual logo.

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { render } from '../../tests/utils';
+import { render } from '@tests/utils';
 import { Logo } from './Logo';
 import { DEFAULT_ALT } from './Logo.const';
 
