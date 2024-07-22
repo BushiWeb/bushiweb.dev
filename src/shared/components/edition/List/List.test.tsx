@@ -1,0 +1,94 @@
+import { render, getByRole as genGetByRole } from '@tests/utils';
+import { expect, test } from 'vitest';
+import { List } from './List';
+import { ListItem } from './ListItem';
+
+test('The list renders an unordered list', () => {
+    const items = ['item1', 'item2'];
+
+    const { getByRole, getAllByRole } = render(
+        <List>
+            {items.map((value, index) => (
+                <ListItem key={index}>{value}</ListItem>
+            ))}
+        </List>,
+    );
+
+    const listElt = getByRole('list');
+    expect(listElt.tagName).toBe('UL');
+
+    const listItemElts = getAllByRole('listitem');
+    expect(listItemElts).toHaveLength(items.length);
+});
+
+test('The list renders an ordered list', () => {
+    const items = ['item1', 'item2'];
+
+    const { getByRole, getAllByRole } = render(
+        <List ordered={true}>
+            {items.map((value, index) => (
+                <ListItem key={index}>{value}</ListItem>
+            ))}
+        </List>,
+    );
+
+    const listElt = getByRole('list');
+    expect(listElt.tagName).toBe('OL');
+
+    const listItemElts = getAllByRole('listitem');
+    expect(listItemElts).toHaveLength(items.length);
+});
+
+test('The list renders the right list items', () => {
+    const items = ['item1', 'item2'];
+
+    const { getAllByRole } = render(
+        <List ordered={true}>
+            {items.map((value, index) => (
+                <ListItem key={index}>{value}</ListItem>
+            ))}
+        </List>,
+    );
+
+    const listItemElts = getAllByRole('listitem');
+    expect(listItemElts).toHaveLength(items.length);
+    for (let i = 0; i < items.length; i++) {
+        expect(listItemElts[i]).toHaveTextContent(items[i]);
+    }
+});
+
+test('The list renders the right list items containing elements', () => {
+    const item = <a href="test.com">Link</a>;
+
+    const { getByRole } = render(
+        <List ordered={true}>
+            <ListItem>{item}</ListItem>
+        </List>,
+    );
+
+    const listItemElt = getByRole('listitem');
+    genGetByRole(listItemElt, 'link', { name: 'Link' });
+});
+
+test('The list and list items have the right class names', () => {
+    const items = ['item1', 'item2'];
+    const className = 'class';
+
+    const { getAllByRole, getByRole } = render(
+        <List className={className}>
+            {items.map((value, index) => (
+                <ListItem key={index} className={className}>
+                    {value}
+                </ListItem>
+            ))}
+        </List>,
+    );
+
+    const listElt = getByRole('list');
+    expect(listElt).toHaveClass(className);
+
+    const listItemElts = getAllByRole('listitem');
+    for (let i = 0; i < items.length; i++) {
+        expect(listItemElts[i]).toHaveClass(className);
+    }
+});
