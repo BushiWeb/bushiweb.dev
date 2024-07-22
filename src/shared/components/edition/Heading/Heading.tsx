@@ -17,7 +17,13 @@ export const Heading = ({
 }: HeadingProps) => {
     return React.createElement(
         `h${level}`,
-        { className: clsx(className, CLASS_LEVEL[level]) },
+        {
+            className: clsx(
+                className,
+                CLASS_LEVEL[level],
+                'text-center tablet:text-start',
+            ),
+        },
         children,
     );
 };
