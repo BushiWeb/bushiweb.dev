@@ -19,9 +19,9 @@ export const Heading = ({
         `h${level}`,
         {
             className: clsx(
-                className,
                 CLASS_LEVEL[level],
                 'text-center tablet:text-start',
+                className,
             ),
         },
         children,
