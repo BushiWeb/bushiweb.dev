@@ -6,6 +6,7 @@ import { useContext, useId } from 'react';
 
 /**
  * Section component for document writing.
+ * Sections automaticaly inserts a Heading component with nested levels, that they use as accessible name.
  * @prop {string} heading - Heading of the section.
  * @prop {string} [className=''] - Additional class names.
  * @prop children - Content of the paragraph.
