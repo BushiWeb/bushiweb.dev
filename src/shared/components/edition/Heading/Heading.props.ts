@@ -1,5 +1,6 @@
 export interface HeadingProps {
-    level?: 1 | 2 | 3;
+    level?: number;
     className?: string;
     children: React.ReactNode;
+    id?: string;
 }
