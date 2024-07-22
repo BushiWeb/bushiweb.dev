@@ -23,6 +23,8 @@ function generateFontSizeRatio(
         fontSize[`l${i}`] = `${baseSize * fontSizeRatio ** i}rem`;
     }
 
+    fontSize['24'] = '2rem';
+
     return fontSize;
 }
 

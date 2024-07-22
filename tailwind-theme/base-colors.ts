@@ -1,4 +1,6 @@
 export default {
+    black: '#000',
+    white: '#fff',
     burgundy: {
         DEFAULT: '#6d071a',
         0: '#000',

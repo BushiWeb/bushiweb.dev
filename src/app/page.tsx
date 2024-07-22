@@ -9,7 +9,7 @@ export default function Home() {
                 </h1>
                 <p className="font-primary text-l1 font-normal leading-normal">
                     Développeur web freelance, je vous accompagne dans
-                    l$apos;installation de votre présence en ligne avec un site
+                    l&apos;installation de votre présence en ligne avec un site
                     web entièrement personnalisé et optimisé pour le
                     référencement.
                 </p>

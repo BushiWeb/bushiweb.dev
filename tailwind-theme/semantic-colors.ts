@@ -22,19 +22,21 @@ export default {
         'on-container': baseColors.lapis[80],
         background: baseColors.lapis[15],
     },
-    neutral: {
-        DEFAULT: baseColors.stone[70],
-        on: baseColors.stone[10],
-        container: baseColors.stone[25],
-        'on-container': baseColors.stone[80],
+    surface: {
         background: baseColors.stone[15],
+        layer1: baseColors.stone[20],
+        layer2: baseColors.stone[25],
+        layer3: baseColors.stone[30],
+        layer4: baseColors.stone[35],
+        on: baseColors.stone[85],
+        'on-variant': baseColors.slate[75],
     },
-    'neutral-variation': {
+    outline: {
         DEFAULT: baseColors.slate[70],
-        on: baseColors.slate[10],
-        container: baseColors.slate[25],
-        'on-container': baseColors.slate[80],
-        background: baseColors.slate[15],
+        variation: baseColors.slate[50],
+    },
+    backdrop: {
+        DEFAULT: baseColors.black,
     },
     success: {
         DEFAULT: baseColors.green[70],
