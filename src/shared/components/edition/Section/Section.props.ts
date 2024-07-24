@@ -1,5 +1,6 @@
 export interface SectionProps {
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
     heading: string;
+    childSections?: React.ReactNode[];
 }

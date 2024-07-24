@@ -16,6 +16,7 @@ export const Paragraph = ({ className = '', children }: ParagraphProps) => {
                 'leading-normal',
                 'mt-150',
                 'mb-200',
+                'max-w-content-l',
                 className,
             )}
         >

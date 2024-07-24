@@ -7,5 +7,5 @@ import { DescriptionListDescriptionProps } from './DescriptionList.props';
 export const DescriptionListDescription = ({
     children,
 }: DescriptionListDescriptionProps) => {
-    return <dd className="pl-200">{children}</dd>;
+    return <dd className="max-w-content-m pl-200">{children}</dd>;
 };

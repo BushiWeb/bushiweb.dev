@@ -7,5 +7,9 @@ import { ListItemProps } from './List.props';
  * @prop children
  */
 export const ListItem = ({ children, className = '' }: ListItemProps) => {
-    return <li className={clsx('mb-100', 'pl-50', className)}>{children}</li>;
+    return (
+        <li className={clsx('mb-100', 'pl-50', 'max-w-content-m', className)}>
+            {children}
+        </li>
+    );
 };

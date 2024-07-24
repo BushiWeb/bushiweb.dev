@@ -5,5 +5,5 @@ import { DescriptionListTermProps } from './DescriptionList.props';
  * @prop children
  */
 export const DescriptionListTerm = ({ children }: DescriptionListTermProps) => {
-    return <dt className="mb-100 font-semibold">{children}</dt>;
+    return <dt className="mb-100 max-w-content-s font-semibold">{children}</dt>;
 };

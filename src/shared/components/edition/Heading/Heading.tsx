@@ -18,7 +18,10 @@ export const Heading = ({
     children,
     id,
 }: HeadingProps) => {
-    const classNames = clsx('text-center tablet:text-start', className);
+    const classNames = clsx(
+        'text-center tablet:text-start max-w-content-m',
+        className,
+    );
 
     if (level > 6 || level < 1) {
         return <p className={classNames}>{children}</p>;
@@ -27,11 +30,7 @@ export const Heading = ({
     return React.createElement(
         `h${level}`,
         {
-            className: clsx(
-                CLASS_LEVEL[level],
-                'text-center tablet:text-start',
-                className,
-            ),
+            className: clsx(CLASS_LEVEL[level], classNames),
             ...(id && { id }),
         },
         children,

@@ -1,0 +1,34 @@
+import { Paragraph } from '@/shared/components/edition/Paragraph/Paragraph';
+import { Section } from '@/shared/components/edition/Section/Section';
+import { Link } from '@/shared/components/edition/Link/Link';
+
+/**
+ * RGPD section of the legal notice.
+ */
+export const Rgpd = () => {
+    return (
+        <Section heading="CNIL et gestion des données">
+            <Paragraph>
+                Conformément aux dispositions de{' '}
+                <Link href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000886460">
+                    la loi 78-17 du 6 janvier 1978 modifiée
+                </Link>
+                , l&apos;utilisateur du site <em>https://bushiweb.dev</em>{' '}
+                dispose d&apos;un droit d&apos;accès, de modification et de
+                suppression des informations collectées. Pour exercer ce droit,
+                envoyez un message à{' '}
+                <Link href="mailto:epf@bushiweb.dev">epf@bushiweb.dev</Link> .
+            </Paragraph>
+
+            <Paragraph>
+                Pour plus d&apos;informations sur la façon dont nous traitons
+                vos données (type de données, finalité, destinataire...), lisez
+                notre{' '}
+                <Link to="/politique-de-confidentialite">
+                    politique de confidentialité
+                </Link>
+                .
+            </Paragraph>
+        </Section>
+    );
+};

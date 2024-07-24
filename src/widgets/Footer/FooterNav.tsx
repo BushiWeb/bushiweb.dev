@@ -19,11 +19,11 @@ type NavLinks = (
 )[];
 
 const NAV_LINKS: NavLinks = [
-    /* {
+    {
         to: '/mentions-legales',
         label: 'Mentions légales',
     },
-    {
+    /* {
         to: '/politique-de-confidentialite',
         label: 'Politique de confidentialité',
     },
