@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import { UrlObject } from 'url';
 
+type NextLinkTarget =
+    | UrlObject
+    | __next_route_internal_types__.RouteImpl<string>;
+
 type NavLinks = (
     | {
-          to: UrlObject | __next_route_internal_types__.RouteImpl<string>;
+          to: NextLinkTarget;
           href?: string;
           label: string;
       }
     | {
-          to?: string;
+          to?: NextLinkTarget;
           href: string;
           label: string;
       }
@@ -26,11 +30,11 @@ const NAV_LINKS: NavLinks = [
     {
         to: '/politique-de-cookies',
         label: 'Politique de cookies',
-    },
+    }, */
     {
         href: '/sitemap.xml',
         label: 'Plan du site',
-    }, */
+    },
 ];
 
 /**
@@ -38,7 +42,7 @@ const NAV_LINKS: NavLinks = [
  */
 export const FooterNav = () => {
     return (
-        <nav className="flex flex-col flex-nowrap items-center gap-150 bg-surface-background px-300 pb-300 pt-150 text-center text-surface-on-variant desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:px-500 desktop:pt-300">
+        <nav className="flex flex-col flex-nowrap items-center gap-150 bg-surface-background px-300 pb-300 pt-150 text-center font-primary text-s1 font-normal leading-normal text-surface-on-variant desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:px-500 desktop:pt-300">
             <ul className="flex flex-row flex-wrap justify-center gap-50">
                 {NAV_LINKS.map(({ label, to, href }) => (
                     <li
