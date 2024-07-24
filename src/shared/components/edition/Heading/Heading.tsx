@@ -19,7 +19,7 @@ export const Heading = ({
     id,
 }: HeadingProps) => {
     const classNames = clsx(
-        'text-center tablet:text-start max-w-content-m',
+        'text-center tablet:text-start max-w-content-m break-words hyphens-auto w-full',
         className,
     );
 

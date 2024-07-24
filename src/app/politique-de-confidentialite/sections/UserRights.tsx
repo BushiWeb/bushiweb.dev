@@ -1,0 +1,70 @@
+import { Paragraph } from '@/shared/components/edition/Paragraph/Paragraph';
+import { Section } from '@/shared/components/edition/Section/Section';
+import { List, ListItem } from '@/shared/components/edition/List/List';
+import { Link } from '@/shared/components/edition/Link/Link';
+import { Heading } from '@/shared/components/edition/Heading/Heading';
+import { PRIVACY_POLICY_DATA } from '../PrivacyPolicy.data';
+
+/**
+ * User's rights section of the privacy policy
+ */
+export const UserRights = () => {
+    return (
+        <Section heading="Vos droits en tant qu'utilisateur">
+            <Paragraph>
+                En vertu du{' '}
+                <abbr title="Règlement Général sur la Protection des Données">
+                    RGPD
+                </abbr>
+                , les utilisateurs ont les droits suivants en tant que personne
+                concernées:
+            </Paragraph>
+            <List>
+                <ListItem>droit d&apos;accès;</ListItem>
+                <ListItem>droit de rectification;</ListItem>
+                <ListItem>droit à l&apos;effacement;</ListItem>
+                <ListItem>droit de restreindre le traitement;</ListItem>
+                <ListItem>droit à la portabilité des données;</ListItem>
+                <ListItem>droit d&apos;objection;</ListItem>
+            </List>
+            <Paragraph>
+                Vous trouverez de plus amples informations sur ces droits au{' '}
+                <em>chapitre 3 (art 12-23) du RGPD</em>.
+            </Paragraph>
+
+            <Heading level={3}>Comment appliquer vos droits?</Heading>
+            <Paragraph>
+                Si vous souhaitez que vos renseignements soient supprimés ou
+                modifiés d&apos;une façon ou d&apos;une autre, vous pouvez nous
+                le communiquer via:
+            </Paragraph>
+            <List>
+                <ListItem>
+                    le <Link to="/contact">formulaire de contact</Link> du site
+                    internet;
+                </ListItem>
+                <ListItem>
+                    email à{' '}
+                    <Link href={`mailto:${PRIVACY_POLICY_DATA.owner.email}`}>
+                        {PRIVACY_POLICY_DATA.owner.email}
+                    </Link>
+                    ;
+                </ListItem>
+                <ListItem>
+                    téléphone ou SMS au{' '}
+                    <Link href={`tel:${PRIVACY_POLICY_DATA.owner.phone}`}>
+                        {PRIVACY_POLICY_DATA.owner.phone}
+                    </Link>
+                    .
+                </ListItem>
+            </List>
+            <Paragraph>
+                Dans le but de simplifier et accélérer la procédure, merci de
+                nous communiquer un moyen de vous identifier dans le but de
+                trouver ces données. Cette information ne sera pas stockée et
+                sera uniquement utilisée pour traiter cette demande en
+                particulier.
+            </Paragraph>
+        </Section>
+    );
+};
