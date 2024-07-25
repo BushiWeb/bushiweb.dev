@@ -1,13 +1,13 @@
 import { Paragraph } from '@/shared/components/edition/Paragraph/Paragraph';
 import { PRIVACY_POLICY_DATA } from './PrivacyPolicy.data';
-import { CollectedData } from './sections/CollectedData';
-import { Consent } from './sections/Consent';
-import { Contact } from './sections/Contact';
-import { Goals } from './sections/Goals';
-import { Juveniles } from './sections/Juveniles';
-import { Laws } from './sections/Laws';
-import { Updates } from './sections/Updates';
-import { UserRights } from './sections/UserRights';
+import { CollectedData } from './_content/CollectedData';
+import { Consent } from './_content/Consent';
+import { Contact } from './_content/Contact';
+import { Goals } from './_content/Goals';
+import { Juveniles } from './_content/Juveniles';
+import { Laws } from './_content/Laws';
+import { Updates } from './_content/Updates';
+import { UserRights } from './_content/UserRights';
 import { Section } from '@/shared/components/edition/Section/Section';
 
 /**
@@ -16,7 +16,7 @@ import { Section } from '@/shared/components/edition/Section/Section';
 const PrivacyPolicy = () => {
     return (
         <Section
-            className="grow bg-surface-background text-surface-on"
+            className="grow"
             heading="Politique de confidentialité"
             childSections={[
                 <Goals key="goals" />,

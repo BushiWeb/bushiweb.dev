@@ -27,10 +27,10 @@ const NAV_LINKS: NavLinks = [
         to: '/politique-de-confidentialite',
         label: 'Politique de confidentialité',
     },
-    /* {
+    {
         to: '/politique-de-cookies',
         label: 'Politique de cookies',
-    }, */
+    },
     {
         href: '/sitemap.xml',
         label: 'Plan du site',

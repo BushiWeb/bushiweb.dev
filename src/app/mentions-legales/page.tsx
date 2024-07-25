@@ -17,7 +17,7 @@ const LegalNotice = () => {
     return (
         <Section
             heading="Mentions légales"
-            className="grow bg-surface-background text-surface-on"
+            className="grow"
             childSections={[
                 <Edition key="edition" />,
                 <Copyright key="copyright" />,

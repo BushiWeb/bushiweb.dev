@@ -42,6 +42,7 @@ export const Section = ({
                 className={clsx(
                     'w-full',
                     'bg-surface-background',
+                    'text-surface-on',
                     'px-300',
                     'pt-400',
                     className,
@@ -68,6 +69,7 @@ export const Section = ({
                 'px-300',
                 '-ml-300',
                 '-mr-300',
+                'text-surface-on',
                 className,
             )}
             aria-labelledby={headingId}
