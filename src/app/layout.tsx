@@ -4,6 +4,7 @@ import { primary, secondary, mono, display } from './_ui/font';
 import { Header } from '@/widgets/Header/Header';
 import { Footer } from '@/widgets/Footer/Footer';
 import Script from 'next/script';
+import { BreakpointProvider } from '@/features/breakpoint/BreakpointProvider';
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -21,9 +22,11 @@ export default function RootLayout({
             className={`${primary.variable} ${secondary.variable} ${mono.variable} ${display.variable} h-full`}
         >
             <body className="flex min-h-full flex-col flex-nowrap items-stretch justify-start font-primary">
-                <Header />
-                {children}
-                <Footer />
+                <BreakpointProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </BreakpointProvider>
             </body>
             <Script
                 src="https://kit.fontawesome.com/4a78fda344.js"
