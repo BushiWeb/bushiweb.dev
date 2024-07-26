@@ -3,7 +3,7 @@
 import { useEffect, useState, createContext } from 'react';
 import { getBreakpoint } from './Breakpoint.utils';
 
-export const breakpointContext = createContext<number | null>(null);
+export const breakpointContext = createContext(0);
 
 /**
  * Adds the breakpoint context, containing a number corresponding to screen size ranges.
@@ -13,7 +13,7 @@ export const BreakpointProvider = ({
 }: {
     children: React.ReactNode;
 }) => {
-    const [breakpoint, setBreakpoint] = useState<number | null>(null);
+    const [breakpoint, setBreakpoint] = useState(0);
 
     useEffect(() => {
         setBreakpoint(getBreakpoint());

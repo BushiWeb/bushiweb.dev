@@ -50,8 +50,16 @@ export const FooterNav = () => {
                         key={label}
                     >
                         {to ?
-                            <Link href={to}>{label}</Link>
-                        :   <a href={href}>{label}</a>}
+                            <Link
+                                href={to}
+                                className="focus-visible:focus-ring"
+                            >
+                                {label}
+                            </Link>
+                        :   <a href={href} className="focus-visible:focus-ring">
+                                {label}
+                            </a>
+                        }
                     </li>
                 ))}
             </ul>

@@ -19,6 +19,7 @@ export const Link = ({
         'text-primary-on-container',
         'hover:underline',
         'visited:text-secondary-on-container',
+        'focus-visible:focus-ring',
         className,
     );
 

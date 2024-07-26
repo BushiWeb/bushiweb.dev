@@ -28,7 +28,6 @@ export const IconButton = ({
             onPress={onPress}
             aria-label={label}
             className={clsx(
-                className,
                 'relative',
                 'grid place-items-center',
                 'h-500 w-500',
@@ -41,6 +40,7 @@ export const IconButton = ({
                 'before:focus:opacity-15',
                 'before:pressed:opacity-15',
                 'focus-visible:focus-ring',
+                className,
             )}
         >
             <FontAwesomeIcon icon={icon} />

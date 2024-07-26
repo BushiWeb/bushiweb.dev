@@ -20,7 +20,7 @@ export const SocialLink = ({
             href={link}
             className={clsx(
                 className,
-                'relative isolate text-24 text-surface-on-variant after:absolute after:left-1/2 after:top-1/2 after:z-low after:h-600 after:w-600 after:-translate-x-1/2 after:-translate-y-1/2',
+                'relative isolate text-24 leading-none text-surface-on-variant after:absolute after:left-1/2 after:top-1/2 after:z-low after:h-600 after:w-600 after:-translate-x-1/2 after:-translate-y-1/2 focus-visible:focus-ring',
             )}
         >
             <FontAwesomeIcon icon={icon} title={title} />

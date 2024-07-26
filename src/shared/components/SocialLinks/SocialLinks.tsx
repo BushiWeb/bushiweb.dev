@@ -6,7 +6,7 @@ import { SocialLink } from './SocialLink';
  */
 export const SocialLinks = () => {
     return (
-        <div className="flex flex-row flex-wrap items-center gap-300 p-150">
+        <div className="flex flex-row flex-nowrap items-center gap-300 p-150">
             <SocialLink
                 icon={faLinkedin}
                 title="Mon profil LinkedIn"

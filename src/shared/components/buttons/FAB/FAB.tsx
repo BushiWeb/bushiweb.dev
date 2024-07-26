@@ -23,7 +23,6 @@ export const FAB = ({ onPress, icon, label, className }: FABProps) => {
             onPress={onPress}
             aria-label={label}
             className={clsx(
-                className,
                 'fixed bottom-200 left-200 z-high',
                 'grid place-items-center',
                 'h-700 w-700',
@@ -35,6 +34,7 @@ export const FAB = ({ onPress, icon, label, className }: FABProps) => {
                 'before:focus:opacity-15',
                 'before:pressed:opacity-15',
                 'focus-visible:focus-ring',
+                className,
             )}
         >
             <FontAwesomeIcon icon={icon} />
