@@ -29,17 +29,17 @@ export const NavigtationDrawer = () => {
                 className="items center fixed inset-0 z-backdrop bg-black/35 backdrop-blur-sm"
                 isDismissable
             >
-                <Modal className="fixed bottom-0 left-0 right-0 rounded-t-500 bg-surface-layer4">
+                <Modal className="fixed bottom-0 left-0 right-0 rounded-t-500 bg-surface-layer4 tablet:right-auto tablet:top-0 tablet:rounded-none tablet:rounded-r-500">
                     <Dialog className="relative outline-none">
                         {({ close }) => (
-                            <nav className="flew-nowrap flex flex-col content-start items-center justify-between gap-400 p-400 text-primary-on-container">
+                            <nav className="flew-nowrap flex flex-col content-start items-center justify-between gap-400 p-400 text-primary-on-container tablet:pb-800 tablet:pl-600 tablet:pr-1000 tablet:pt-1000">
                                 <IconButton
                                     icon={faXmark}
                                     label="Fermer la tiroir de navigation"
                                     onPress={close}
-                                    className="!absolute left-300 top-300"
+                                    className="!absolute left-300 top-300 tablet:left-auto tablet:right-300"
                                 />
-                                <ul className="flex flex-col flex-nowrap items-center justify-start gap-300">
+                                <ul className="flex flex-col flex-nowrap items-center justify-start gap-300 tablet:items-start">
                                     {navigationLinks.map(({ label, to }) => (
                                         <li key={label}>
                                             <Link
