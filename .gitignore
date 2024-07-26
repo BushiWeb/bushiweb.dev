@@ -49,6 +49,7 @@ lerna-debug.log*
 *.sln
 *.sw?
 *.code-workspace
+references
 
 # tools
 .eslintcache
