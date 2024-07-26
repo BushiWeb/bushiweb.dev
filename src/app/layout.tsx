@@ -22,6 +22,20 @@ export default function RootLayout({
             className={`${primary.variable} ${secondary.variable} ${mono.variable} ${display.variable} h-full`}
         >
             <body className="flex min-h-full flex-col flex-nowrap items-stretch justify-start font-primary">
+                {/* Google Tag Manager (noscript) */}
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-W4DGRJMZ"
+                        height="0"
+                        width="0"
+                        style={{
+                            display: 'none',
+                            visibility: 'hidden',
+                        }}
+                        title="Download scripts from tag manager"
+                    ></iframe>
+                </noscript>
+                {/* End Google Tag Manager (noscript) */}
                 <BreakpointProvider>
                     <Header />
                     {children}
@@ -32,6 +46,23 @@ export default function RootLayout({
                 src="https://kit.fontawesome.com/4a78fda344.js"
                 strategy="afterInteractive"
             ></Script>
+            {/* Google Tag Manager */}
+            <Script id="gtm-script">
+                {`(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js',
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-W4DGRJMZ');`}
+            </Script>
+            {/* End Google Tag Manager */}
         </html>
     );
 }
