@@ -28,14 +28,15 @@ export const IconButton = ({
             onPress={onPress}
             aria-label={label}
             className={clsx(
-                'relative',
+                'relative isolate',
                 'grid place-items-center',
                 'h-500 w-500',
                 'bg-transparent text-secondary',
                 'rounded-full',
                 'text-l2',
+                'm-100',
                 'before:absolute before:z-high before:h-500 before:w-500 before:rounded-full before:bg-secondary before:opacity-0',
-                'after:absolute after:z-low after:h-600 after:w-600 after:bg-transparent',
+                'after:absolute after:-inset-100 after:z-low after:bg-transparent',
                 'before:hover:opacity-10',
                 'before:focus:opacity-15',
                 'before:pressed:opacity-15',
