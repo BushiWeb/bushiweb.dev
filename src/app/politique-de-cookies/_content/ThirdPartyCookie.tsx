@@ -26,7 +26,10 @@ export const ThirdPartyCookies = ({
         'URL de la politique de cookies',
         'Utilité',
     ];
-    const data = [headers, ...mappedCookies];
+    const data: [typeof headers, ...typeof mappedCookies] = [
+        headers,
+        ...mappedCookies,
+    ];
 
     return <Table data={data} caption={caption} />;
 };

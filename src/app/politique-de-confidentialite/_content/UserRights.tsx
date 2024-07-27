@@ -40,10 +40,6 @@ export const UserRights = () => {
             </Paragraph>
             <List>
                 <ListItem>
-                    le <Link to="/contact">formulaire de contact</Link> du site
-                    internet;
-                </ListItem>
-                <ListItem>
                     email à{' '}
                     <Link href={`mailto:${PRIVACY_POLICY_DATA.owner.email}`}>
                         {PRIVACY_POLICY_DATA.owner.email}

@@ -6,7 +6,7 @@ import { TableRow } from './TableRow';
 /**
  * Table component, to use within documents.
  * Responsive on mobile, displays the data in groups of lists.
- * @prop {(React.ReactNode | string[])[][]} data - Date to use to populate the table. The first table defines the header row. The rest are the data.
+ * @prop {[string[], ...(React.ReactNode | string[])[][]]} data - Date to use to populate the table. The first table defines the header row. The rest are the data.
  * @prop {string} caption - Identifies and introduces the table.
  */
 export function Table({ data, caption }: TableProps) {

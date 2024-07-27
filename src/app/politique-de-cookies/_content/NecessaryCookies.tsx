@@ -19,7 +19,10 @@ export const NecessaryCookies = ({
         lifetime,
     ]);
     const headers = ['Nom du cookie', 'Utilité', 'Durée de conservation'];
-    const data = [headers, ...mappedCookies];
+    const data: [typeof headers, ...typeof mappedCookies] = [
+        headers,
+        ...mappedCookies,
+    ];
 
     return <Table data={data} caption={caption} />;
 };

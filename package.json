@@ -1,7 +1,7 @@
 {
     "name": "bushiweb.dev",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.4",
     "type": "module",
     "scripts": {
         "preinstall": "npx only-allow pnpm",
@@ -14,7 +14,12 @@
         "check:lint": "eslint . --max-warnings 0 --cache",
         "check:format": "prettier . --write --cache",
         "check:csslint": "stylelint \"**/*.css\" --cache --fix --max-warnings 0",
-        "check:all": "pnpm check:format && pnpm check:lint && pnpm check:csslint"
+        "check:all": "pnpm check:format && pnpm check:lint && pnpm check:csslint",
+        "docker:build": "docker build -t bushiweb .",
+        "docker:run": "docker run --rm -d -p 3000:3000 --name bushiweb bushiweb",
+        "docker:kill": "docker kill bushiweb",
+        "docker:tag": "docker image tag bushiweb bushiweb/bushiweb.dev:%npm_package_version%",
+        "docker:push": "docker push bushiweb/bushiweb.dev:%npm_package_version%"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -31,6 +36,7 @@
         "react": "^18.2.0",
         "react-aria-components": "^1.3.1",
         "react-dom": "^18.2.0",
+        "sharp": "^0.33.4",
         "tailwindcss-react-aria-components": "^1.1.4"
     },
     "devDependencies": {
